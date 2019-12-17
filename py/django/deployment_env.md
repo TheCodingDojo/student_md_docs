@@ -148,3 +148,9 @@
 46. `sudo service nginx restart`
 47. paste public ip address from AWS under description tab into browser
 - when you want to delete this AWS instance, right click it -> instance state -> terminate
+
+# Notes
+- what we pushed to github here was just the django proj and django app folder, normally the `server` folder would be pushed as well, but not pushing it avoids a few additional steps:
+  - adding the `.gitignore` up a level
+  - updating deplpoyment references to django proj folder to be preceded by `server/`
+  - `cd` through `server` to get to django proj folder
