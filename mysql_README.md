@@ -10,7 +10,7 @@
 - follow the rest of windows installation instructions on the learn platform
 - Check the box to start server when installer is finished
 - if mysql isn't recognized in termainl after installing
-  - paste this in terminal: alias mysql=/usr/local/mysql/bin/mysql
+  - paste this in terminal: `alias mysql=/usr/local/mysql/bin/mysql`
 
 # Experiences
 - "Changed mac account to be admin and after restart lost ALL files associated with that account and it started the Mac as though the account had been created for the first time.
