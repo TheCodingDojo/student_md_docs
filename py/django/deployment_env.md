@@ -154,3 +154,9 @@
   - adding the `.gitignore` up a level
   - updating deplpoyment references to django proj folder to be preceded by `server/`
   - `cd` through `server` to get to django proj folder
+
+# Updating deployed project with new code
+1. push changes to github repo
+2. `cd` to repo folder on the AWS server
+3. `git pull`
+4. restart gunicorn & nginx
