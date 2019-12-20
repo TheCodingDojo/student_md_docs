@@ -22,3 +22,7 @@
 - difficulty will be similar to these assignments:
   - Portfolio
   - The Internet
+
+# Csharp
+## Activities Exam
+- ***Activity*** is a reserverd word in C#, DO NOT USE IT AS A MODEL NAME
