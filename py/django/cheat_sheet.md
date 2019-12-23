@@ -114,12 +114,20 @@
 2. `from {{app_name}}.models import *`
 
 ## Source Control - Only when you need to add to github
-- add the `env` folder to `.gitignore`
-  - `pip freeze > requirements.txt` to create a file that lists installed packages (dependencies)
-  - when repo is cloned / shared
-    - create env
-    - activate it
-    - `pip install -r requirements.txt` to install everything required
+- create a `.gitignore` file with the below code so certain files/folders are not added to github:
+  - ``` txt
+      .vscode
+      env/
+      venv/
+      __pycache__/
+      .vscode/
+      db.sqlite3
+    ```
+- `pip freeze > requirements.txt` to create a file that lists installed packages (dependencies)
+- when repo is cloned / shared
+  - create env
+  - activate it
+  - `pip install -r requirements.txt` to install everything required
 
 # Django MTV (Model Template View)
 - the view retrieves data from the database via the model, formats it, bundles it up in an HTTP response object and sends it to the client (browser).

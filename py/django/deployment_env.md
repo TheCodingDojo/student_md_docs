@@ -8,12 +8,12 @@
 2. create a file named `.gitignore` at same level as `manage.py`
     - add this code to it
       - ``` txt
-        .vscode
-        env/
-        venv/
-        __pycache__/
-        .vscode/
-        db.sqlite3
+            .vscode
+            env/
+            venv/
+            __pycache__/
+            .vscode/
+            db.sqlite3
         ```
 3. from the `server` folder with `env` activated: `pip freeze > requirements.txt`
 4. Open terminal to `server` folder
