@@ -7,7 +7,7 @@
 
 # Recommended Settings
 - ctrl + shift + p then type Open Settings (JSON)
-- update the following settings or add if they are missing
+- update the following settings or add if they are missing (***DO NOT REMOVE THE CURLY BRACES IN THE SETTINGS FILE***)
 - ``` json
       "files.autoSave": "onFocusChange",
       "editor.formatOnSave": true,
