@@ -5,6 +5,7 @@
 - [Charting/graphs with Pygal](https://www.pluralsight.com/guides/creating-interactive-charts-with-python-pygal)
 
 # File Upload
+- [Image Upload](https://www.geeksforgeeks.org/python-uploading-images-in-django/)
 - [Learn Platform - File uploading](http://learn.codingdojo.com/m/119/6155/42956)
 - [File Upload Tutorial](https://simpleisbetterthancomplex.com/tutorial/2016/08/01/how-to-upload-files-with-django.html)
 - [Instructor Will's Example](https://github.com/wgoode3/Django-Imageboard)
