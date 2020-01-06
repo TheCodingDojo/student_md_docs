@@ -1,4 +1,4 @@
-# Django 2.2 Cheat Sheet
+# Django 2.2 Cheat Sheet (`env` in project structure)
 
 # ***!!!Replace `{{your_project_name}}` and `{{app_name}}` with your chosen project & app names, removing curly braces!!!***
 
