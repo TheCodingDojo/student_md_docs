@@ -257,4 +257,5 @@
 - `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 - chrome console gives an invalid format warning when trying to insert a value that is not formatted in this way
 
-# [Named Routes](http://learn.codingdojo.com/m/119/6152/45787)
+
+# [Advanced Topics](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/advanced.md)
