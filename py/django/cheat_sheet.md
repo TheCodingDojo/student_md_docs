@@ -68,8 +68,8 @@
 
 # When reopening vscode
 - vscode needs to be opened to the `server` folder so it detects the virtual environment
-- if terminal doesn't show `(env)`: press **`+`** icon on terminal
-- if `env` still has not activated, re-select the interpreter from the steps above
+- **if terminal doesn't show `(env)`:** press **`+`** icon on terminal
+    - if `env` still has not activated, re-select the python interpreter and then press **`+`** icon on terminal again
 
 # Debugging Notes
 ## To Debug with breakpoints (won't auto reload on code changes)
