@@ -21,5 +21,5 @@
 
 # Advice
 - It's confusing to try to understand or memorize how the two different types of functions differ regarding the `this` keyword
-- I wouldn't spend too much time worrying about it, instead, if you just remember to verify what the value of `this` is (`console.log(this)`), you will be fine. And if it's not the value you want, you can test out using the other type of function and through doing this, you will build come to learn when to use one or the other.
+- I wouldn't spend too much time worrying about it, instead, if you just remember to verify what the value of `this` is (`console.log(this)`), you will be fine. And if it's not the value you want, you can test out using the other type of function and through practicing in this way, you will get used to it.
 - Generally, methods of objects / classes should be normal functions so that `this` will point to the object that the method is inside of, which is helpful
