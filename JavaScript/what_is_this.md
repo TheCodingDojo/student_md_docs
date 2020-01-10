@@ -19,6 +19,11 @@
 - it's not a perfect analogy, but imagine two different people interpreting the context of a conversation differently, they both might think the word `this` in the conversation is referring to something different.
 - in short, `function` determines the value of `this` on their own, whereas "An arrow function does not have its own `this`. The `this` value of the enclosing lexical scope is used"
 
+## `.bind` and `.call`
+- `.bind`. and `.call` are two methods that can be used on non arrow functions to manually set the value of `this` so that when the function is executed, the value of `this` will be whatever was manually specified
+- you likely won't have to use `.bind` and `.call` much for now
+- sometimes when these methods are needed for a regular function, converting it to an arrow function will make `this` point to what you want it to be and then you won't need to use these methods
+
 # Advice
 - It's confusing to try to understand or memorize how the two different types of functions differ regarding the `this` keyword
 - I wouldn't spend too much time worrying about it, instead, if you just remember to verify what the value of `this` is (`console.log(this)`), you will be fine. And if it's not the value you want, you can test out using the other type of function and through practicing in this way, you will get used to it.
