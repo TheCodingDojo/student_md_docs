@@ -7,15 +7,19 @@
 
 # Recommended Settings
 - ctrl + shift + p then type Open Settings (JSON)
-- update the following settings or add if they are missing (***DO NOT REMOVE THE CURLY BRACES IN THE SETTINGS FILE***)
+- update the following settings or add them if they are missing inside of the curly braces that start and end the file (***DO NOT REMOVE THE CURLY BRACES AT START AND END OF FILE***)
 - ``` json
-      "files.autoSave": "onFocusChange",
-      "editor.formatOnSave": true,
-      "editor.snippetSuggestions": "top",
-      "editor.wordWrap": "on",
-      "editor.detectIndentation": true,
-      "editor.renderWhitespace": "selection",
-
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "top",
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": true,
+  "editor.renderWhitespace": "selection",
+  "emmet.includeLanguages": {
+      "razor": "html",
+      "aspnetcorerazor": "html",
+      "javascript": "javascriptreact",
+  },
     ```
 
 ## Python
