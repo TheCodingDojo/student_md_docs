@@ -9,21 +9,21 @@
 5. `cd server`
 6. **windows**: `python -m venv env` **mac**: `python3 -m venv env`
     - new line in terminal will appear after finished
-7. open vscode to `server` folder. From terminal, you can type: `code .`
+7. **open vscode to `server` folder**. From terminal, you can type: `code .`
     - mac - if `code .` doesn't work, open vscode:
       1. cmd + shift + p
       2. type: shell command: install 'code' command in PATH
       3. restart terminal
       4. open terminal to `server` folder then type `code .` again
-8. `Ctrl+shift+P` -> 'select interpreter' -> choose the one from the env
+8. `Ctrl+shift+P` -> Python: Select Interpreter -> choose the one from the env
     - if it doesn't show up, your env is still being created, wait then select interpreter again
-9. Open new integrated terminal, should show `(env)` in the terminal
+9. Open new integrated terminal, **it should show `(env)` in the terminal**
     - if integrated terminal doesn't show `(env)`, press the **`+`** button to open new integrated terminal
-10. Install dependencies from your integrated terminal that shows `(env)` so these will be installed only for this project
+10. Install dependencies from your integrated terminal that shows `(env)` so these will be installed ***only*** for this project
     - `pip install Django==VERSION_NUMBER`
     - [Check Ver. Num On Learn Platform](http://learn.codingdojo.com/m/119/6152/42896)
     - `pip install pylint-django`
-11. From `server` folder `django-admin startproject your_proj_name .`
+11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .`
     - ` .` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
 12. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
     1. click gear icon

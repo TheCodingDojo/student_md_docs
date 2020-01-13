@@ -15,7 +15,7 @@
       2. type: shell command: install 'code' command in PATH
       3. restart terminal
       4. open terminal to `server` folder then type `code .` again
-8. `Ctrl+shift+P` -> 'select interpreter' -> choose the one from the env
+8. `Ctrl+shift+P` -> Python: Select Interpreter -> choose the one from the env
     - if it doesn't show up, your env is still being created, wait then select interpreter again
 9. Open new integrated terminal, should show `(env)` in the terminal
     - if integrated terminal doesn't show `(env)`, press the **`+`** button to open new integrated terminal
