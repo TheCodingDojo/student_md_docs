@@ -147,7 +147,7 @@
 5. Whatever the view function returns is the *response* which finishes the *request* *response* cycle.
 - the *request* and *response* can be seen in the network tab of chrome dev tools
 
-# Determing the type of relationship
+# [Determing the type of relationship](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/relationship_planning.md)
 
 # Prefill date from db into input box
 - ``` py
