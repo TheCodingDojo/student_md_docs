@@ -40,4 +40,3 @@
         replies = models.ManyToManyField("self", blank=True, related_name="thread")
     ```
 - Many to many field will act as a list of comments that you can access from any given comment
-

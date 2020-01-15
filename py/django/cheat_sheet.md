@@ -100,6 +100,8 @@
 - you generally have **leading slashes on your urls** here
 - when you `return redirect(f'/users/{some_id}')`
 
+# [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/troubleshooting.md)
+
 # Terminal Commands
 ## `python manage.py runserver`
 - stop debug mode if it is on
