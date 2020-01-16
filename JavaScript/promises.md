@@ -1,4 +1,4 @@
-# Optional `Promise` Lecture
+# Promises Example
 
 # Analogy
 - Person1: I'm going to get some coffee, do you want some?
@@ -16,7 +16,6 @@
   - this is to prevent the rest of the code in our app from being delayed by code that takes an unknown amount of time
   - it's like when you are waiting for something to finish, and you go and get some other work done while waiting
 
-  
 ## A `Promise` help avoid callback hell
 - callback hell is when you have many nested callbacks and your code consequently becomes very indented and hard to read
 - because the `.then` and `.catch` methods can be chained onto the returned `Promise` (at same indentation level), they keep things flatter and less nested
@@ -24,7 +23,7 @@
 # Set up fake 'database' with some data
 - ``` js
   /* 
-    Rickyisms is the term devised by the fans of Trailer Park Boys for Ricky's malapropisms and eggcorns (substitution speech errors.)
+    Rickyism is the term devised by the fans of Trailer Park Boys for Ricky's malapropisms and eggcorns (substitution speech errors.)
   */
   const rickyisms = {
     0: "All for all and one for one.",
@@ -135,7 +134,7 @@
 - ``` js
   getRickyismPromise(5)
     .then((data) => {
-      console.log(`Planet: ${data}`);
+      console.log(`Rickyism: ${data}`);
     })
     .catch((error) => {
       console.log(error);
