@@ -1,4 +1,4 @@
-# Promises Example
+# Promise Examples
 
 # Analogy
 - Person1: I'm going to get some coffee, do you want some?
@@ -16,7 +16,7 @@
   - this is to prevent the rest of the code in our app from being delayed by code that takes an unknown amount of time
   - it's like when you are waiting for something to finish, and you go and get some other work done while waiting
 
-## A `Promise` help avoid callback hell
+## A `Promise` helps avoid callback hell
 - callback hell is when you have many nested callbacks and your code consequently becomes very indented and hard to read
 - because the `.then` and `.catch` methods can be chained onto the returned `Promise` (at same indentation level), they keep things flatter and less nested
 
@@ -77,13 +77,13 @@
       console.log(error);
     },
     (data) => {
-      console.log(`Rickyism: ${data}`);
+      console.log(`Rickyism id ${id}: ${data}`);
     }
   );
     ```
 
 ### Async issue
-- is the first `getRickyism` function call above gauranteed to give us a response before the 2nd `getRickyism` call?
+- is the **first** `getRickyism` function call above guaranteed to give us a response before the 2nd `getRickyism` call?
   - no, because the first one might randomly take 2 seconds while the second one only takes 0.5 seconds
 
 # Example of things that can take unknown amount of time
