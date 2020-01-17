@@ -17,3 +17,20 @@
 - build an app that consumes a weather API to display weather data and deploy it via google cloud
 - during follow up in person interview, was asked to add a few recommended changes to this app within 2 hours alotted time
   1. change `await` calls to be async 
+
+# 1st Job After Bootcamp
+## 01/16/2020
+### Questions
+- What does REST stand for / what is it for
+- What does API stand for?
+- How do you handle asyncrhonous API calls in JS
+  - Promises, Observables, Callbacks
+- Do you know what PEP8 is?
+- What is functional programming
+- What is a class vs what is an object
+- What is a function decorator
+- What is a singleton
+
+### Algos
+- Input: Array of ints 1 through 100 in order with one integer missing
+- Output: The missing integer
