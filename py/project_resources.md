@@ -1,5 +1,6 @@
 # Admin
-- [Admin Framework](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/)
+- [Django Admin Site Docs](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/)
+- [Simple Login Reg With Django Admin YouTube](https://www.youtube.com/watch?v=Cy7IUU6jMpA)
 
 # Charting / Graphs
 - [Charting/graphs with Pygal](https://www.pluralsight.com/guides/creating-interactive-charts-with-python-pygal)
