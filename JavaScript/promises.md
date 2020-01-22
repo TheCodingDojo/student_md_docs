@@ -6,6 +6,7 @@
 - Person1: I promise to be back with coffee in 15 minutes
 - There is no guarantee they will be back in 15 minutes, or with the coffee
 - Store could be closed or have a problem and can't give him coffee, or some accident could happen and he may not make it back in 15 minutes or may abandon the task altogether
+- A JavaScript promise WILL get back to you, but it takes an unknown amount of time
 
 # `Promise`
 - "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value." [[mdn docs]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
