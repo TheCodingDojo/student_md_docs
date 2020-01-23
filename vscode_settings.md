@@ -1,4 +1,5 @@
 # Useful Generic Extensions
+- CSS Formatter
 - Bracket Pair Colorizer
   - closing & opening brackets color cordinated
 - indent-rainbow

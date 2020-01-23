@@ -1,6 +1,6 @@
 # Color picker
 - use a color picker to copy the colors exactly
-- [Windows Instant Eyedropper](http://instant-eyedropper.com/downloads/","Windows Instant Eyedropper Color Picker)
+- [Windows Instant Eyedropper](http://instant-eyedropper.com/downloads/)
 
 ## Mac
 - `cmd + space` then type digital color meter
