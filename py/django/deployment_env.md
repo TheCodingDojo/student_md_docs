@@ -92,7 +92,7 @@
 31. `python manage.py collectstatic`
 32. `python manage.py makemigrations`
 33. `python manage.py migrate`
-34. test gunicorn to see if it works: `gunicorn {{DJANGO_PROJECT_NAME.wsgi}}`
+34. test gunicorn to see if it works: `gunicorn {{DJANGO_PROJECT_NAME}}.wsgi`
     - press `ctrl + c` to stop it
 35. type `deactivate` to deactivate `env`
 36. `sudo vim /etc/systemd/system/gunicorn.service`
