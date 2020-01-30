@@ -46,7 +46,7 @@
           app.run(debug=True)
         ```
 13. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
-    1. click gear icon
+    1. click gear icon or "create a launch.json file" link
     2. select flask (if it doesn't show, might need to select python then flask will show)
     3. If prompted: press enter to confirm file name `app.py` or change the name if you used a different file name
     - `launch.json` will be created - ok to close it or delete it if need to re-do this step

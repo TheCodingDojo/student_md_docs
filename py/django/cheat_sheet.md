@@ -29,7 +29,7 @@
 11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .`
     - ` .` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
 12. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
-    1. click gear icon
+    1. click gear icon or "create a launch.json file" link
     2. select python
     3. select django
     - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
