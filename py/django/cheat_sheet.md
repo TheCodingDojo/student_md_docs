@@ -1,6 +1,8 @@
 # Django 2.2 Cheat Sheet (`env` in project structure)
 
-# ***!!!Replace `{{your_project_name}}` and `{{app_name}}` with your chosen project & app names, removing curly braces!!!***
+# Follow EVERY step carefully!
+
+# ***!!!Copy & Paste commands - REPLACE `{{your_project_name}}` and `{{app_name}}` with your chosen project & app names, removing curly braces!!!***
 
 1. open terminal to where you want your project folder to be created
 2. `mkdir {{your_project_name}}`
@@ -26,7 +28,7 @@
     - `pip install Django==VERSION_NUMBER`
     - [Check Ver. Num On Learn Platform](http://learn.codingdojo.com/m/119/6152/42896)
     - `pip install pylint-django`
-11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .`
+11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .` <- don't forget the period
     - ` .` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
 12. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
     1. click gear icon or "create a launch.json file" link
