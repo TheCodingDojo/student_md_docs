@@ -1,3 +1,6 @@
+# Omnisharp / 'image not found' error / go to definition broken
+- downgrade C# extension to 2nd most recent ver. via gear icon in extensions panel
+
 # Session not persisting w/ MVC template
 - remove following lines from `Startup.cs`
 - ``` csharp
