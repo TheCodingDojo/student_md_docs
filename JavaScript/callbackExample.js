@@ -1,14 +1,14 @@
 function callFriend(yourName, friendsName, callMeBack) {
-  console.log(`ring ring, calling ${friendsName}`);
-  console.log(`hey ${yourName}, let me call you back real quick`);
+  console.log(`Ring ring, calling ${friendsName}`);
+  console.log(`${friendsName}: Hey ${yourName}, let me call you back real quick!`);
 
-  setTimeout(() => {
+  setTimeout(function () {
     callMeBack(friendsName)
   }, 3000);
 }
 
 function receiveCallBack(callersName) {
-  console.log(`ring ring, ${callersName} is calling you back.`);
+  console.log(`Ring ring, ${callersName} is calling you back.`);
 }
 
-callFriend("Your Name", "Friends Name", receiveCallBack)
+callFriend("Your Name", "Friend's Name", receiveCallBack)
