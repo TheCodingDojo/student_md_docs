@@ -1,7 +1,7 @@
 # [Trello Board](https://trello.com/b/aUV3OKmx/tech-interview-questions)
 
-# 2nd Job In Industry
-## 12.02.19
+# 12.02.19
+## Landed 2nd Job In Industry
 - Was at first job for 3 months then got laid off
 - 2nd job took a few months to find, went from $65k/y to 97k/y
 
@@ -18,8 +18,8 @@
 - during follow up in person interview, was asked to add a few recommended changes to this app within 2 hours alotted time
   1. change `await` calls to be async 
 
-# 1st Job After Bootcamp
-## 01/16/2020
+# 01/16/2020
+## Landed 1st Job After Bootcamp
 ### Questions
 - What does REST stand for / what is it for
 - What does API stand for?
@@ -34,3 +34,11 @@
 ### Algos
 - Input: Array of ints 1 through 100 in order with one integer missing
 - Output: The missing integer
+
+# 02/02/2020
+## API Challenge
+- given 3 API endpoints that all return different data for specified person, get data for a single person from all 3 APIs and dynamically add that data  to the DOM to be displayed
+
+## Looking for
+- DRY code
+- Firing off all the API calls together rather than waiting for first call to finish before starting 2nd call and so on
