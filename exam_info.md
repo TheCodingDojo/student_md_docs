@@ -10,9 +10,6 @@
 - any time a change is made near the end, go through the checklist again testing each requirements and checking it off to make sure nothing broke what was working before
 
 # Web Fund
-## Algo Exam
-- **NOT OPEN BOOK, no computer, phone, or helping each other**
-- write your name on paper, after finishing, turn it in then take a quick break and start the HTML & CSS exam
 
 ## HTML & CSS Exam (**OPEN BOOK** - NO Helping Each other)
 - most important thing is the overall layout / alignment
