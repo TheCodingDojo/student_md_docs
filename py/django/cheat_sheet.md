@@ -81,6 +81,18 @@
 - **Stop server** `ctrl + c` then press play button in debug panel or press F5
   - add a breakpoint by clicking to the LEFT of the line number so that a red circle appears
 
+# App flow walkthrough
+1. *Request* is made from a URL being visited via: 
+    - typed into address bar
+    - anchor tag
+    - `<form>` submitted triggering `POST` *request* to URL in `action` attribute
+    - `return redirect` from `views.py`
+2. URL is compared to the `urls.py` file to see if it matches any of the urls in the list of urls
+3. When URL is matched, it runs the specified view function, passing any URL parameters to the view function. The view function needs a parameter for each of the URL parameters using the same parameter names.
+4. view function gets data from the database if needed and sends that data to the right template (HTML) to display the data, ***OR*** the view function `return redirect` to another URL
+5. Whatever the view function returns is the *response* which finishes the *request* *response* cycle.
+- the *request* and *response* can be seen in the network tab of chrome dev tools
+
 # Route Parameters / URL clarifications
 ## `urls.py` - NO LEADING SLASHES
 - `path('users/<int:user_id>', views.user_profile, name="users_profile"),`
@@ -104,8 +116,6 @@
 ### `views.py`
 - you generally have **leading slashes on your urls** here
 - when you `return redirect(f'/users/{some_id}')`
-
-# [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/troubleshooting.md)
 
 # Terminal Commands
 ## `python manage.py runserver`
@@ -140,19 +150,11 @@
 - the view retrieves data from the database via the model, formats it, bundles it up in an HTTP response object and sends it to the client (browser).
 - In other words, the view presents the model to the client as an HTTP response.
 
-# App flow walkthrough
-1. *Request* is made from a URL being visited via: 
-    - typed into address bar
-    - anchor tag
-    - `<form>` submitted triggering `POST` *request* to URL in `action` attribute
-    - `return redirect` from `views.py`
-2. URL is compared to the `urls.py` file to see if it matches any of the urls in the list of urls
-3. When URL is matched, it runs the specified view function, passing any URL parameters to the view function. The view function needs a parameter for each of the URL parameters using the same parameter names.
-4. view function gets data from the database if needed and sends that data to the right template (HTML) to display the data, ***OR*** the view function `return redirect` to another URL
-5. Whatever the view function returns is the *response* which finishes the *request* *response* cycle.
-- the *request* and *response* can be seen in the network tab of chrome dev tools
+# [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/troubleshooting.md)
 
 # [Determing the type of relationship](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/relationship_planning.md)
+
+# [Advanced Topics](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/advanced.md)
 
 # Prefill date from db into input box
 - ``` py
@@ -165,6 +167,3 @@
   ```
 - `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 - chrome console gives an invalid format warning when trying to insert a value that is not formatted in this way
-
-
-# [Advanced Topics](https://github.com/TheCodingDojo/student_md_docs/blob/master/py/django/advanced.md)
