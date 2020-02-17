@@ -1,4 +1,6 @@
 # Useful Generic Extensions
+
+- click the square blocks on the side panel to go to the extension marketplace and then search for and install the below listed extensions
 - CSS Formatter
 - Bracket Pair Colorizer
   - closing & opening brackets color cordinated
@@ -13,9 +15,11 @@
 - open in browser
   - right click `.html` file tab to open in browser
 
-# Recommended Settings
-- ctrl + shift + p then type Open Settings (JSON)
+## Recommended Settings
+
+- ctrl or cmd + shift + p then type: Open Settings (JSON) -> press enter
 - add these settings on ***TOP of file, inside curly brace***
+
 - ``` json
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
@@ -31,9 +35,11 @@
     ```
 
 ## Python
+
 - linter: pycodestyle
 - formatter: autopep8
 
-# Misc
+## Misc
+
 - [font with ligatures](https://dev.to/expertsinside/cascadia-code-a-new-font-for-visual-studio-code-and-terminal-47oc)
 - [integrated cmder](https://winsmarts.com/using-cmder-as-integrated-shell-in-vscode-c3340714fe3c)
