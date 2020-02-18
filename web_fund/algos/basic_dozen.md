@@ -46,7 +46,7 @@
 1. Print integers 1 through 100
 2. Print integers 1 through 100 backwards
 3. Print integers evenly divisible by 5 that are between 1 and 100
-4. Print the sum of a given array of integers
+4. Function: return the sum of a given array of integers
 5. Function: Given an array of integers, create and return a new array that has only the even integers
 6. Function: Given an array of integers, print the average of only the odd numbers
 7. Function: Given an array of integers, replace negative numbers with the string 'negative' and positive numbers with the string 'positive'
