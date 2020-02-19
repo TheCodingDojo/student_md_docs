@@ -1,33 +1,16 @@
-# Basic Dozen Algos
-
-## Starter Code
-
-- ``` js
-  for (let i = 0; i < arr.length; i++) {
-    // your code here
-  }
-
-  // no parameters or as many as needed
-  function funcName (param1, param2) {
-    // your code here
-  }
-
-  // execute function, no args or as many as the function needs (corresponding to params)
-  // the arguments are the actual values you give to your func to be accessed via the parameter names
-  funcName(arg1, arg2);
-    ```
+# Basic Algos
 
 ## Function Example
 
 ### Define the function
 
 - ``` js
-  function addTwo(n1, n2) {
-    return n1 + n2;
+  function addTwo(num1, num2) {
+    return num1 + num2;
   }
     ```
 
-  - `n1` is the name of paremeter1, `n2` is the name of parameter2
+  - `num1` is the name of paremeter 1, `num2` is the name of parameter 2
   - parameters are placeholders for the actual values that will be passed in to the function when it is executed
 
 ### Execute the function
@@ -36,9 +19,9 @@
   var sum = addTwo(5, 10);
     ```
 
-  - `5` is argument1, `10` is argument2
+  - `5` is argument 1, `10` is argument 2
   - arguments are the actual values that are passed in to the function when it is executed
-  - `n1` will have the value `5` and `n2` will have the value `10`
+  - `num1` will have the value `5` and `num2` will have the value `10`
   - `var sum = addTwo(5, 10);` returns the result of the addition and assigns that result into the `var` named `sum`
 
 ## Basic Dozen
@@ -55,3 +38,12 @@
 10. Function: Given an array and an integer, return a count of how many integers are less than the Function: given integer
 11. Function: Given a start integer and a stop integer, print integers from the start (inclusive) to the stop (exclusive)
 12. Function: Given an array, shift each item to the right 1 index, replace the first item with 0
+
+## More Basic Algos (Functions)
+
+1. **combineStrings**: Given 3 strings, concatenate then return the strings in this order: 3rd string, 1st string, 2nd string
+2. **distanceDriveable**: Calculate and return total miles that can be driven before running out of gas, what info do you need to answer this?
+3. **combineSmallerStringFirst**: Given 2 strings, concatenate them together with the smaller string in the front and the longer string in the back and return the result
+    - If the strings are the same length, concatenate the first string at the beginning.
+4. **stringRepeat**: Given a string and an integer (n), return one string that is the given string repeated n times
+5. **loopAndMultiply**: Given 3 numbers, n1, n2, n3 - return the sum of n2 times n3 after n1 iterations
