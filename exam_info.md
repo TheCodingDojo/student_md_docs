@@ -4,6 +4,7 @@
 - **To enter code:** go to https://learn.codingdojo.com/dashboard or click back to tracks -> click exams at the top
 - 5 hour timer will start when exam code is entered
 - **if done early, ask instructor for a pre-check**, we can tell you if something needs more work and you can use your remaining time to fix. If all red belt requirements are met, you can work on black belt requirements without worrying about breaking things.
+- **DO NOT LEAVE without showing your instructor your exam**
 - open book / open notes / can use google
 
 ## Use a Checklist To Track Completed Requirements & For Testing
@@ -15,6 +16,7 @@
 
 ### HTML & CSS Exam (**OPEN BOOK** - NO Helping Each other)
 
+- **use a color picker**
 - most important thing is the overall layout / alignment
   - focus on getting this down before the small details like gradients, etc.
 - keep developing on same monitor to avoid different monitor sizes breaking your layout
