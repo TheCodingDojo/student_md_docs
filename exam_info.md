@@ -1,10 +1,11 @@
 # Exam Info
 
 - It's common to have to re-take the exam, success rate is dramatically higher on the 2nd attempt.
-- **To enter code:** go to https://learn.codingdojo.com/dashboard or click back to tracks -> click exams at the top
+- **To enter code:** go to [https://learn.codingdojo.com/dashboard](https://learn.codingdojo.com/dashboard) or click back to tracks -> click exams at the top
 - 5 hour timer will start when exam code is entered
 - **if done early, ask instructor for a pre-check**, we can tell you if something needs more work and you can use your remaining time to fix. If all red belt requirements are met, you can work on black belt requirements without worrying about breaking things.
 - **DO NOT LEAVE without showing your instructor your exam**
+- **NO HELPING EACH OTHER**
 - open book / open notes / can use google
 
 ## Use a Checklist To Track Completed Requirements & For Testing
@@ -19,8 +20,8 @@
 - **use a color picker**
 - most important thing is the overall layout / alignment
   - focus on getting this down before the small details like gradients, etc.
-- keep developing on same monitor to avoid different monitor sizes breaking your layout
-- don't worry about the upload a video demo requirement, if you want, you can take a screenshot of your website when it's finished and upload that instead
+- keep developing on same window size to avoid different sizes breaking your layout
+- **don't worry about the upload a video demo requirement**, if you want, you can take a screenshot of your website when it's finished and upload that instead
 - difficulty will be similar to these assignments:
   - Portfolio
   - About Python
