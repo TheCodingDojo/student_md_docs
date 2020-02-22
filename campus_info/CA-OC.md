@@ -1,5 +1,16 @@
 # Campus Info
 
+## Chatrooms
+
+- Use these to communicate to fellow students and your instructors.
+- [Slack Invite Link](https://app.slack.com/client/TLJ7B7DV0)
+  - Use your full real name when signing up.
+  - Press the `+` next to **Channels** to join the campus' chatrooms
+  - Instructor's will have their slack names prefixed with `instructor_`
+- Workspace Name: `oc-coding-dojo.slack.com`
+- [Dojo-Wide Mattermost Chat](https://dojo.news/login)
+  - Use this to see resources shared across all campuses and to be connected with alumni from all campuses.
+
 ## Hours & Access
 
 - M-F 7am - 6pm.
