@@ -5,6 +5,10 @@
 - M-F 7am - 6pm.
 - Do not leave your stuff in the Dojo if you are stepping outside after 6pm unless you have a shared key or know someone who can let you back in.
 
+### Formal Hours / Instructor's Hours
+
+- M-F 9am - 5pm.
+
 ### Parking
 
 - [Required Parking Form Must Be Submitted](https://docs.google.com/forms/d/e/1FAIpQLSepu18xGQaG5LCo3Qo3XIs59kyfNPXYChNwXZp8i0_l22PaJQ/viewform?usp=sf_link)
