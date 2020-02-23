@@ -37,5 +37,5 @@
 - **Possessing a shared key is a responsibility**.
 - Your name & phone number must be written on the white board if you have a key.
 - **You are responsible for prompty responding** to student's questions about when / if you will be on site so they know if they can depend on you to be let in.
-- If you cannot be there to let in a student in that is trying to plan to come in early / stay late, give them the key until you need it back.
+- If you cannot be there to let in a student that is trying to plan to come early / stay late, give them the key until you need it back.
 - If instructors hear that students are having a hard time coordinating with a keyholder, the keyholder will be required to give up their key to someone else who has been trying to come early / stay late.
