@@ -16,7 +16,7 @@ every year in the last four years."
 
 ## Solution
 
-- Open a db in workbench -> open new SQL tab and run the given script (you could also create an ERD with this table but this is easier more direct and less room for human error)
+- Open a db in workbench -> open new SQL tab and run the given script (you could also create an ERD with this table but running the SQL is less work, more direct, and less room for human error)
 
   - ``` SQL
       CREATE TABLE countries (
@@ -42,8 +42,20 @@ every year in the last four years."
 
 - Start by checking off the easiest requirements & auto format your code: Edit -> Format -> Beautify Query (Ctrl+B)
 
-1. `[x] top 3 average government debts`
-    - **Google** "mysql select top"
+1. `[x] for those countries of which gdp_per_capita was over 40,000 dollars`
+
+    - ``` SQL
+      SELECT
+          code, year, gdp_per_capita, govt_debt
+      FROM
+          countries
+      WHERE
+          gdp_per_capita > 40000
+      ;
+        ```
+
+2. `[x] top 3 average government debts`
+    - **Google**: "mysql select top"
     - will find out `TOP` is a keyword but MySQL uses `LIMIT` instead
 
     - ``` SQL
@@ -55,22 +67,9 @@ every year in the last four years."
         ;
         ```
 
-2. `[x] for those countries of which gdp_per_capita was over 40,000 dollars`
-
-    - ``` SQL
-      SELECT
-          code, year, gdp_per_capita, govt_debt
-      FROM
-          countries
-      WHERE
-          gdp_per_capita > 40000
-      LIMIT 3
-      ;
-        ```
-
 3. `[x] in every year in the last four years.`
 
-    - could easily hard code the year that is 4 years before the current year into the `WHERE` clause, but then the query be will be wrong after the new year
+    - could easily hard code the year that is 4 years before the current year into the `WHERE` clause, but then the query will be wrong after the new year
     - **Google**: "mysql select recent years"
     - `DATE_SUB(NOW(),INTERVAL 1 YEAR);` may be found, but doesn't seem to work, maybe because our db is storing only the year and not a full date
     - the search results probably also displayed `MySQL YEAR() function - w3resource`
