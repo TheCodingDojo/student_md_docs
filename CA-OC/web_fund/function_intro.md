@@ -18,33 +18,58 @@
 
 ### Solution
 
-- ``` js
+- ```js
   function canAffordToBuy(cost, budget) {
     if (cost <= budget) {
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }
-    ```
+  ```
 
   - parameter1 is `cost`
   - parameter2 is `budget`
   - when the function is called / executed, it needs to be given / passed these pieces of information in this order
 
-- ``` js
+- ```js
   canAffordToBuy(10, 20);
-    ```
+  ```
 
   - argument1 is `10`, the value of the `cost` parameter will be `10`
   - argument2 is `20`, the value of the `budget` parameter will be `20`
 
 ### Store the returned value
 
-- ``` js
+- ```js
   var canAffordCar = canAffordToBuy(20000, 15000);
-    ```
+  ```
 
   1. `canAffordToBuy(20000, 15000);` returns `false`
   2. the variable `canAffordCar` has `false` assigned to it
+
+## Example Extended
+
+- what if we wanted to make it more flexible and know if someone has enough money to buy multiple items?
+- our function now needs more information, the cost of multiple items
+
+### Solution With Extended Requirements
+
+- change `cost` parameter to `costs` to indicate it will be an array where each item is a cost
+- sum the `costs` to get a `totalCost`
+
+- ```js
+  function canAffordToBuy(costs, budget) {
+    var totalCost = 0;
+
+    for (let i = 0; i < costs.length; i++) {
+      totalCost += costs[i];
+    }
+
+    if (totalCost <= budget) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  ```
