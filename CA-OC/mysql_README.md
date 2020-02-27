@@ -1,5 +1,9 @@
 # MySQL Info
 
+## [Windows Installation Video](https://www.youtube.com/watch?v=u96rVINbAUI)
+
+- **SELECT "Use Legacy Authentication Method"** when installing
+
 ## Mac Uninstall [destroy-mysql](https://github.com/nprakash/HelpfulScripts/blob/master/destroy-mysql.sh)
 
 - terminal: type `sh` then drag and drop file to auto the path to the file, then enter to run
