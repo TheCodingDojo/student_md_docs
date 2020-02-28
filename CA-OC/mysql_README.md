@@ -1,24 +1,27 @@
 # MySQL Info
 
+- [Download Link](https://dev.mysql.com/downloads/mysql/)
+
 ## [Windows Installation Video](https://www.youtube.com/watch?v=u96rVINbAUI)
 
-- **SELECT "Use Legacy Authentication Method"** when installing
-
-## Mac Uninstall [destroy-mysql](https://github.com/nprakash/HelpfulScripts/blob/master/destroy-mysql.sh)
-
-- terminal: type `sh` then drag and drop file to auto the path to the file, then enter to run
+- **RADIO BUTTON:** "Use Legacy Authentication Method"\*\* when installing
+- **CHECK BOX:** "Configure MySQL Server as a Windows Service
+- **CHECK BOX:** "Start the MySQL Server at System Startup
 
 ## Mac Installation: Use Windows MySQL Installation Instructions
 
 - IMPORTANT for MAC users:
-- When you get to the MySQL Server Installation
-- FOLLOW THE WINDOWS installation instructions on the learn platform
-- choose mac from dropdown when downloading the installer
-- download DMG Archive option
-- follow the rest of windows installation instructions on the learn platform
-- Check the box to start server when installer is finished
-- if mysql isn't recognized in termainl after installing
+- Use Download Link above
+- Select Mac
+- Download DMG Archive option from the
+- **RADIO BUTTON:** "Use Legacy Authentication Method"\*\* when installing
+- **CHECK BOX:** "Start the MySQL Server at System Startup
+- If mysql isn't recognized in termainl after installing
   - paste this in terminal: `alias mysql=/usr/local/mysql/bin/mysql`
+
+## Mac Uninstall Instructions [destroy-mysql](https://github.com/nprakash/HelpfulScripts/blob/master/destroy-mysql.sh)
+
+- terminal: type `sh` then drag and drop file to auto the path to the file, then enter to run
 
 ## Cautionary Tale
 
