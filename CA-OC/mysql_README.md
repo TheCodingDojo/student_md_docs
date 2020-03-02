@@ -21,6 +21,8 @@
 
 ## Mac Uninstall Instructions [destroy-mysql](https://github.com/nprakash/HelpfulScripts)
 
+- If your installing doesn't work, uninstall it
+
 1. download the `.sh` file
 2. in terminal: type `sh` then drag and drop file to auto to the terminal to auto fill the path to the file, then press enter to run
 
