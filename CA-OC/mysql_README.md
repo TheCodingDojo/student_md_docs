@@ -4,7 +4,7 @@
 
 ## [Windows Installation Video](https://www.youtube.com/watch?v=u96rVINbAUI)
 
-- **RADIO BUTTON:** "Use Legacy Authentication Method"\*\* when installing
+- **RADIO BUTTON:** "Use Legacy Authentication Method" when installing
 - **CHECK BOX:** "Configure MySQL Server as a Windows Service
 - **CHECK BOX:** "Start the MySQL Server at System Startup
 
@@ -14,7 +14,7 @@
 - Use Download Link above
 - Select Mac
 - Download DMG Archive option from the
-- **RADIO BUTTON:** "Use Legacy Authentication Method"\*\* when installing
+- **RADIO BUTTON:** "Use Legacy Authentication Method" when installing
 - **CHECK BOX:** "Start the MySQL Server at System Startup
 - If mysql isn't recognized in termainl after installing
   - paste this in terminal: `alias mysql=/usr/local/mysql/bin/mysql`
