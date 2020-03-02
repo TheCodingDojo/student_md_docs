@@ -1,7 +1,7 @@
 # Useful Generic Extensions
 
 - click the square blocks on the side panel to go to the extension marketplace and then search for and install the below listed extensions
-- CSS Formatter
+- Prettier - Code formatter
 - Bracket Pair Colorizer
   - closing & opening brackets color cordinated
 - indent-rainbow
@@ -18,9 +18,9 @@
 ## Recommended Settings
 
 - ctrl or cmd + shift + p then type: Open Settings (JSON) -> press enter
-- add these settings on ***TOP of file, inside curly brace***
+- add these settings on **_TOP of file, inside curly brace_**
 
-- ``` json
+- ```json
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "top",
@@ -32,7 +32,7 @@
       "aspnetcorerazor": "html",
       "javascript": "javascriptreact",
   },
-    ```
+  ```
 
 ## Python
 
