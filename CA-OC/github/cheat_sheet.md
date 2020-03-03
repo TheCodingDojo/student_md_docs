@@ -3,8 +3,12 @@
 ## Getting started
 
 - Read [Git Handbook](https://guides.github.com/introduction/git-handbook/)
-- Replace `{{stuff}}` when using this cheat sheet with your own variable including the `{{}}` characters
 - Make your own cheat sheet of commonly used commands to reinforce learning
+
+**! IMPORTANT**
+
+- Replace `{{variable}}` with your own variable
+- Remove the `{{}}` characters
 
 ## Resources
 
