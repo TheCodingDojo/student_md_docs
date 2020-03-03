@@ -70,6 +70,9 @@
 - make changes
 - push changes to repo
 - make a pull request on github using the web interface
+- add a reviewer
+- reviewer should determine if changes are approved
+- merge branch into master
 
 ---
 
