@@ -4,10 +4,7 @@
 
 - Read [Git Handbook](https://guides.github.com/introduction/git-handbook/)
 - Make your own cheat sheet of commonly used commands to reinforce learning
-
-**! IMPORTANT**
-
-- Replace `{{variable}}` with your own variable
+- **!!!IMPORTANT!!!** Replace `{{variable}}` with your own variable
 - Remove the `{{}}` characters
 
 ## Resources
@@ -34,8 +31,8 @@
 ## How to clone a project
 
 - open a terminal window
-- `cd {{path of folder to clone project folder}}`
-- copy the url of the repo from GitHub
+- `cd` to where you want the new cloned folder to be created
+- copy the url of the repo from GitHub via the **Clone or download** button
 - `git clone {{url}}`
 - `ls` or `dir` to view cloned project
 - `cd {{newly created project folder name}}`
@@ -46,7 +43,16 @@
 
 ## Branch Strategies / Collaboration
 
-### General workflow
+### Everything master branch - quick and easy
+
+- everyone commits to master
+- push and pull often
+- to avoid merge conflicts do not edit the same file at the same time
+- resolve merge conflicts in an editor by selecting the changes you want to keep
+
+### Multi branch
+
+#### General workflow
 
 - update local master branch with `git pull`
 - create a new branch from master `git checkout -b {{feature branch name}}`
@@ -57,14 +63,7 @@
 - commit changes `git commit -m '{{some message}}'`
 - push changes to remote repository `git push`
 
-### Everything master branch - quick and easy
-
-- everyone commits to master
-- push and pull often
-- to avoid merge conflicts do not edit the same file at the same time
-- resolve merge conflicts in an editor by selecting the changes you want to keep
-
-### Multi branch
+#### Multi Branch In Depth Steps
 
 - create a new branch from master
 - make changes
