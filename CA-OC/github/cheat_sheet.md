@@ -45,10 +45,28 @@
 
 ### Everything master branch - quick and easy
 
+#### Tips
+
 - everyone commits to master
 - push and pull often
 - to avoid merge conflicts do not edit the same file at the same time
-- resolve merge conflicts in an editor by selecting the changes you want to keep
+- resolve merge conflicts in an editor or in github by selecting the changes you want to keep
+
+#### General workflow for collaboration
+
+- 1 person creates a new repository on github.com (add appropriate .gitignore if necessary)
+- repo creator needs to 'Invite a collaborator' under Settings -> Manage access
+- each collaborator clones the repo to their local machine `git clone {{url}}`
+
+##### Repeat the steps below to push code to master
+
+- create/edit files
+- read the status of the vsc `git status`
+- add all files to staging `git add .`
+- `git status`
+- save changes to the vcs `git commit -m '{{some message}}'
+- push changes to repository `git push`
+- `git status`
 
 ### Multi branch
 
