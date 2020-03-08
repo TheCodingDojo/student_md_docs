@@ -107,14 +107,16 @@
     console.log(`The item is: ${item}. The index is: ${idx}`);
   });
 
-  // arrow function shorthand for one line, wrap in parens, what is in parens is implicit (auto) returned
+  // arrow function shorthand for one line of code after the arrow
+  // what is after arrow is implicitly (auto) returned
+  // sometimes code after arrow needs to be wrapped in parenthesis
   nums.forEach((item, idx) =>
     console.log(`The item is: ${item}. The index is: ${idx}`)
   );
   ```
 
   - here, our function is being created on the fly as the first argument
-  - this is just like calling a function and creating an array on the fly as an argument
+  - just like you can create an array on the fly and pass it to a function, you can create a function on the fly and pass it to a function
 
     - ```js
       printAllItems([10, 11, 12]);
