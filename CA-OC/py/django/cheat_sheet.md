@@ -29,7 +29,8 @@
 9. Open new integrated terminal, **it should show `(env)` in the terminal**
    - if integrated terminal doesn't show `(env)`, press the **`+`** button to open new integrated terminal
 10. Install dependencies from your integrated terminal that shows `(env)` so these will be installed **_only_** for this project
-    - `pip install Django==VERSION_NUMBER`
+    - windows: `pip install Django==VERSION_NUMBER`
+    - **mac**: `pip3 install Django==VERSION_NUMBER`
     - [Check Ver. Num On Learn Platform](http://learn.codingdojo.com/m/119/6152/42896)
 11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .` <- don't forget the period
     - `.` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
