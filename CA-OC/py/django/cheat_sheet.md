@@ -1,5 +1,7 @@
 # Django 2.2 Cheat Sheet (`env` in project structure)
 
+- **windows**: do this once: ctrl+shift+p -> select default shell -> Command Prompt
+
 ---
 
 ## Follow EVERY step carefully!\*
