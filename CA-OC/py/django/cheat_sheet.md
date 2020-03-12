@@ -43,7 +43,7 @@
     - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
 13. `python manage.py startapp {{app_name}}` to make a new app with it's own folder (adding `_app` as a suffix to the name can help make the folder structure clearer)
 14. Add your app in `settings.py` which is in `your_proj_name` folder
-    - add _`'{{app_name}}',`_ to the 0 idx (top) of `INSTALLED_APPS` **list** (don't forget the comma)
+    - add _`'{{app_name}}',`_ to the 0 idx (top) of `INSTALLED_APPS` **list** (**don't forget the comma**)
 15. `urls.py` inside `your_proj_name` folder
 
     - ```py
@@ -75,12 +75,10 @@
 
     - ```py
       from django.shortcuts import render, redirect
-      ```
-
 
       def index(request):
           return render(request, 'index.html')
-        ```
+      ```
 
 19. `python manage.py runserver` - see Debugging Notes below
 
@@ -188,6 +186,7 @@
 ### Source Control - Only when you need to add to github
 
 - create a `.gitignore` file with the below code so certain files/folders are not added to github:
+
   - ```txt
       .vscode
       env/
@@ -196,6 +195,7 @@
       .vscode/
       db.sqlite3
     ```
+
 - `pip freeze > requirements.txt` to create a file that lists installed packages (dependencies)
 - when repo is cloned / shared
   - create env
@@ -233,5 +233,6 @@
           'formatted_release_date': selected_show.release_date.strftime("%Y-%m-%d")
       }
   ```
+
 - `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 - chrome console gives an invalid format warning when trying to insert a value that is not formatted in this way
