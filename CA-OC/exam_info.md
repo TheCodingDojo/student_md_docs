@@ -8,12 +8,18 @@
 - **NO HELPING EACH OTHER**
 - open book / open notes / can use google
 
+---
+
 ## Use a Checklist To Track Completed Requirements & For Testing
 
 - check off each requirement when completed
 - any time a change is made near the end, go through the checklist again testing each requirements and checking it off to make sure nothing broke what was working before
 
+---
+
 ## Web Fund
+
+---
 
 ### HTML & CSS Exam (**OPEN BOOK** - NO Helping Each other)
 
@@ -26,8 +32,30 @@
   - Portfolio
   - About Python
 
+---
+
+## Python
+
+- **BEFORE** uploading or zipping and emailing: `pip freeze > requirements.txt`
+  - so we can recreate the `env` to test
+- **DELETE** `env` folder
+  - to reduce file size so upload will work
+- You can recreate your `env` later if needed
+  - after activating the recreated `env` run: `pip install -r requirements.txt`
+
+---
+
+## MERN
+
+- **BEFORE** uploading or zipping and emailing (to reduce file size):
+  - **DELETE** the `node_modules` folder on your back end
+  - **DELETE** the `node_modules` folder on the front-end inside your `client` folder
+- You can recreate your `node_modules` later if needed by running `npm i` on the `server` level **AND** the `client` level
+
+---
+
 ## Csharp
 
 ### Activities Exam
 
-- ***Activity*** is a reserverd word in C#, DO NOT USE IT AS A MODEL NAME
+- **_Activity_** is a reserverd word in C#, DO NOT USE IT AS A MODEL NAME
