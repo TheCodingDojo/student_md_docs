@@ -14,6 +14,8 @@
   - runs `.html` file as a live server that auto refreshes page when changes are made
 - open in browser
   - right click `.html` file tab to open in browser
+- Live Share
+  - the one by Microsoft
 
 ## Recommended Settings
 
