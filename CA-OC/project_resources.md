@@ -18,6 +18,8 @@
 
 ## Ideas
 
+- If you make something centered around helping people / communities, you may get free PR attention from the Dojo! We've had previous student's projects mentioned in news articles which is great to put on your resume!
+
 1. Environmentalism
    Do you have an idea that would help society live in a more sustainable way? Create a project that makes “going green” a reality. This can include, but is not limited to:
    Reducing or monitoring carbon emissions
