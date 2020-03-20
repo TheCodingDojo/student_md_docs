@@ -34,7 +34,7 @@
     - **windows**: `pip install Django==VERSION_NUMBER`
     - **mac**: `pip3 install Django==VERSION_NUMBER`
     - [Check Ver. Num On Learn Platform](http://learn.codingdojo.com/m/119/6152/42896)
-11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .` <- don't forget the period
+11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .` **<- don't forget the period**
     - `.` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
 12. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
     1. click gear icon or "create a launch.json file" link
@@ -196,7 +196,7 @@
       db.sqlite3
     ```
 
-- `pip freeze > requirements.txt` to create a file that lists installed packages (dependencies)
+- `pip freeze > requirements.txt` with `env` active to create a file that lists installed packages (dependencies)
 - when repo is cloned / shared
   - create env
   - activate it
