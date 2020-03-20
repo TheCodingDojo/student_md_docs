@@ -8,6 +8,10 @@
 - **NO HELPING EACH OTHER**
 - open book / open notes / can use google
 
+## ABSOLUTELY NO sharing exam wire frame to those who haven't taken it yet
+
+- this will result in those who haven't taken it yet getting a harder exam
+
 ---
 
 ## Use a Checklist To Track Completed Requirements & For Testing
