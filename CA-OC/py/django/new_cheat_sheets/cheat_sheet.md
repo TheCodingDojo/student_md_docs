@@ -1,4 +1,4 @@
-# Django 2.2 Cheat Sheet (`env` in project structure)
+# Django 2.2 Cheat Sheet
 
 - **windows**: do this once: ctrl+shift+p -> select default shell -> Command Prompt
 
@@ -8,43 +8,26 @@
 
 ---
 
-## **_!!!Copy & Paste commands - REPLACE `{{your_project_name}}` and `{{app_name}}` with your chosen project & app names, REMOVING curly braces!!!_**
+## **_!!!Copy & Paste commands - REPLACE `{{text}}` with your chosen names (REMOVE CURLYS)!!!_**
 
 1. open terminal to where you want your project folder to be created
 2. `mkdir {{your_project_name}}`
 3. `cd {{your_project_name}}`
-4. `mkdir server`
-5. `cd server`
-6. **windows**: `python -m venv env` **mac**: `python3 -m venv env`
-   - new line in terminal will appear after finished
-7. **open vscode to `server` folder**. From terminal, you can type: `code .`
-   - mac - if `code .` doesn't work, open vscode:
-     1. cmd + shift + p
-     2. type: shell command: install 'code' command in PATH
-     3. restart terminal
-     4. open terminal to `server` folder then type `code .` again
-8. Select python interpreter
-   1. Windows: `Ctrl+shift+P` Mac: `Cmd+shift+P`
-   2. Type: Python: Select Interpreter
-   3. Choose from dropdown the one with `env`
-   - if it doesn't show up, your env might still be processing or you named it differently or the env was created in the wrong place
-9. Open new integrated terminal, **it should show `(env)` in the terminal**
-   - if integrated terminal doesn't show `(env)`, press the **`+`** button to open new integrated terminal
-10. Install dependencies from your integrated terminal that shows `(env)` so these will be installed **_only_** for this project
-    - **windows**: `pip install Django==VERSION_NUMBER`
-    - **mac**: `pip3 install Django==VERSION_NUMBER`
-    - [Check Ver. Num On Learn Platform](http://learn.codingdojo.com/m/119/6152/42896)
-11. From `server` folder in integrated terminal: `django-admin startproject your_proj_name .` **<- don't forget the period**
-    - `.` will make it so there's only one folder with the your_proj_name instead of also having an inner folder with the same name
-12. Click debug icon in vscode side bar (bug icon Ctrl+shift+D)
-    1. click gear icon or "create a launch.json file" link
-    2. select python
-    3. select django
-    - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
-13. `python manage.py startapp {{app_name}}` to make a new app with it's own folder (adding `_app` as a suffix to the name can help make the folder structure clearer)
-14. Add your app in `settings.py` which is in `your_proj_name` folder
-    - add _`'{{app_name}}',`_ to the 0 idx (top) of `INSTALLED_APPS` **list** (**don't forget the comma**)
-15. `urls.py` inside `your_proj_name` folder
+4. activate the python environment that Django is installed in
+   - drag and drop the `activate` file from environment folder into terminal and press enter
+   - your terminal should now show `(your_env_name)`
+5. `django-admin startproject {{your_django_proj_name}} .` **<- don't forget the period**
+   - `.` will make it so there's only one folder with the {{your_django_proj_name}} instead of also having an inner folder with the same name
+6. type `code .` to open VSCode to `{{your_project_name}}` folder
+   - if `code .` doesn't work, open VSCode to `{{your_project_name}}` manually
+     - to make `code .` work next time: `cmd + shift + p`, then type `shell command: install 'code' command in PATH`
+7. open integrated VSCode terminal `ctrl + ~` or from `View` menu drop down
+   - integrated terminal should show `(your_env_name)` because it auto activated environment
+     - if environment is not activated, drag and drop the `activate` file into VSCode terminal
+8. `python manage.py startapp {{app_name}}` to make a new app with it's own folder (adding `_app` as a suffix to the name can help make the folder structure clearer)
+9. Add your app in `settings.py` which is in `{{your_django_proj_name}}` folder
+   - add _`'{{app_name}}',`_ to the 0 idx (top) of `INSTALLED_APPS` **list** (**don't forget the comma**)
+10. `urls.py` inside `{{your_django_proj_name}}` folder
 
     - ```py
       # from django.contrib import admin
@@ -56,7 +39,7 @@
       ]
       ```
 
-16. create `urls.py` in `{{app_name}}` folder
+11. create `urls.py` in `{{app_name}}` folder
 
     - ```py
       from django.urls import path
@@ -68,10 +51,10 @@
       ]
       ```
 
-17. create following folder structure in `{{app_name}}` folder
+12. create following folder structure in `{{app_name}}` folder
     - `templates`
       - `index.html`
-18. `views.py`
+13. `views.py`
 
     - ```py
       from django.shortcuts import render, redirect
@@ -80,30 +63,25 @@
           return render(request, 'index.html')
       ```
 
-19. `python manage.py runserver` - see Debugging Notes below
+14. `python manage.py runserver`
+    - see Debugging Notes below for additional setup steps if you want additional debugging tools
 
 ---
+
+## Select linter to get rid of false underline errors (one time only per environment)
+
+- `ctrl or cmd + shift + p` -> type `Python: Select Linter` -> select `pycodestyle`
+- also install `autopep8` formatter if prompted to benefit from auto format
 
 ## When reopening vscode
 
-- vscode needs to be opened to the `server` folder so it detects the virtual environment
-- **if terminal doesn't show `(env)`:** press **`+`** icon on terminal
-  - if `env` still has not activated, re-select the python interpreter and then press **`+`** icon on terminal again
+- vscode needs to be opened to the `{{your_project_name}}` folder so it detects the virtual environment
+- **if terminal doesn't show `(your_env_name)`:** press the **`+`** icon on terminal
+  - if environment still has not activated, re-do the select python interpreter steps and then press **`+`** icon on terminal again
 
 ---
 
-## Debugging Notes
-
----
-
-### To Debug with breakpoints (won't auto reload on code changes)
-
-- **Stop server** `ctrl + c` then press play button in debug panel or press F5
-  - add a breakpoint by clicking to the LEFT of the line number so that a red circle appears
-
----
-
-## App flow walkthrough
+## App flow walkthrough: Re-read this until you know it by heart
 
 1. _Request_ is made from a URL being visited via:
    - typed into address bar
@@ -134,7 +112,7 @@
 
 ---
 
-### When are values inserted into urls?*
+### When are values inserted into urls?\*
 
 - when a client types in a url
 
@@ -185,7 +163,7 @@
 
 ### Source Control - Only when you need to add to github
 
-- create a `.gitignore` file with the below code so certain files/folders are not added to github:
+- create a `.gitignore` file with the below code so these files/folders are not added to github:
 
   - ```txt
       .vscode
@@ -236,3 +214,30 @@
 
 - `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 - chrome console gives an invalid format warning when trying to insert a value that is not formatted in this way
+
+## Debugging Notes
+
+---
+
+### One time setup per project to be able to use breakpoints
+
+- Select python interpreter
+
+  1. Windows: `Ctrl+shift+P` Mac: `Cmd+shift+P`
+  2. Type: Python: Select Interpreter
+  3. Select the one with the path to your environment folder
+  4. Click debug icon in vscode side bar (bug icon `Ctrl+shift+D`)
+  5. click "**create a launch.json file**" link or gear icon
+  6. select python
+  7. select django
+     - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
+
+---
+
+### To Debug with breakpoints (won't auto reload on code changes)
+
+- **Stop server** `ctrl + c` then press play button in debug panel or press F5
+  - add a breakpoint by clicking to the LEFT of the line number so that a red circle appears
+  - everywhere you add a breakpoint, your app will pause running on this line until you use the debug control panel to continue
+
+---
