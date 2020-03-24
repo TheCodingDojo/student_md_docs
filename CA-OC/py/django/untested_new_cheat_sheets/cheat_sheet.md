@@ -14,7 +14,8 @@
 2. `mkdir {{your_project_name}}`
 3. `cd {{your_project_name}}`
 4. activate the python environment that Django is installed in
-   - drag and drop the `activate` file from environment folder into terminal and press enter
+   - **windows (use cmd)**: drag and drop the `activate` file from environment folder into cmd terminal and press enter
+   - **mac:**: type `source` (<-don't forget the space) into your terminal then drag and drop the `activate` file and press enter
    - your terminal should now show `(your_env_name)`
 5. `django-admin startproject {{your_django_proj_name}} .` **<- don't forget the period**
    - `.` will make it so there's only one folder with the {{your_django_proj_name}} instead of also having an inner folder with the same name
