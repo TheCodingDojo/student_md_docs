@@ -79,7 +79,7 @@
 21. `git clone {{YOUR_REPO_URL}}` - click the Clone or download button on your repo to get the URL
 22. `sudo apt-get install python3-venv`
     - y to continue if prompted
-23. `cd {{YOUR_REPO_NAME}}`
+23. `cd {{GITHUB_REPO_NAME}}`
 24. `python3 -m venv env`
     - new line will appear in terminal after it's finished
     - `ls` should now show a `venv` folder
@@ -117,8 +117,8 @@
          [Service]
          User=ubuntu
          Group=www-data
-         WorkingDirectory=/home/ubuntu/{{YOUR_REPO_NAME}}
-         ExecStart=/home/ubuntu/{{YOUR_REPO_NAME}}/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/{{YOUR_REPO_NAME}}/{{DJANGO_PROJ_NAME}}.sock {{DJANGO_PROJ_NAME}}.wsgi:application
+         WorkingDirectory=/home/ubuntu/{{GITHUB_REPO_NAME}}
+         ExecStart=/home/ubuntu/{{GITHUB_REPO_NAME}}/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/{{GITHUB_REPO_NAME}}/{{DJANGO_PROJ_NAME}}.sock {{DJANGO_PROJ_NAME}}.wsgi:application
          [Install]
          WantedBy=multi-user.target
          ```
@@ -144,11 +144,11 @@
         server_name {{YOUR_EC2_IPv4_Public_IP_ADDRESS}};
         location = /favicon.ico { access_log off; log_not_found off; }
         location /static/ {
-            root /home/ubuntu/{{YOUR_REPO_NAME}};
+            root /home/ubuntu/{{GITHUB_REPO_NAME}};
         }
         location / {
             include proxy_params;
-            proxy_pass http://unix:/home/ubuntu/{{YOUR_REPO_NAME}}/{{DJANGO_PROJ_NAME}}.sock;
+            proxy_pass http://unix:/home/ubuntu/{{GITHUB_REPO_NAME}}/{{DJANGO_PROJ_NAME}}.sock;
         }
       }
       ```
