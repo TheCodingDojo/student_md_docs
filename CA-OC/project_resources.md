@@ -7,6 +7,7 @@
 ### APIs
 
 - [A collective list of free APIs](https://github.com/public-apis/public-apis)
+- [Collective COVID-19 API List from Postman](https://covid-19-apis.postman.com/?mkt_tok=eyJpIjoiT1RrelpqUm1aamRqWlRJNSIsInQiOiJOeVRxZ0JXUW1hY21HekQ1U1hCXC9QZ00zSm9xc1F5UDluYWFIbkk3aFFFTWNUcURkVmd0dEtvOGJnbzVzdzFoODF0S0VpWXpDVElsNXZUY29iU0djOEIySDRLeWlFK3FrUFB6MlRCZUZnb1VkS3VPeG5VclZQZWx6dTZuVGNMVlEifQ%3D%3D)
 
 ### CSS
 
