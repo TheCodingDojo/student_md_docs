@@ -16,6 +16,8 @@
   - right click `.html` file tab to open in browser
 - Live Share
   - the one by Microsoft
+- SQLite
+  - to view SQLite tables (useful in Python Stack during Django)
 
 ## Recommended Settings
 
