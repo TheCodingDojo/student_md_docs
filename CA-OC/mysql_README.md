@@ -19,12 +19,12 @@
 - If mysql isn't recognized in termainl after installing
   - paste this in terminal: `alias mysql=/usr/local/mysql/bin/mysql`
 
-## Mac Uninstall Instructions [destroy-mysql](https://github.com/nprakash/HelpfulScripts)
+## Mac Uninstall Instructions [destroy-mysql](https://github.com/neilm813/destroy-mysql)
 
 - If your installing doesn't work, uninstall it
 
-1. download the `.sh` file
-2. in terminal: type `sh` then drag and drop file to auto to the terminal to auto fill the path to the file, then press enter to run
+1. download the `.sh` file using clone or download button
+2. in terminal: type `sh` (add a space after `sh`) then drag and drop file to auto to the terminal to auto fill the path to the file, then press enter to run
 
 ## Cautionary Tale
 
