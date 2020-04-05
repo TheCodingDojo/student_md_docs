@@ -204,17 +204,22 @@
 
 ## Prefill date from db into input box
 
-- ```py
-  def edit_show(request, show_id):
-      selected_show = Show.objects.get(id=show_id)
-      context = {
-          'selected_show': selected_show,
-          'formatted_release_date': selected_show.release_date.strftime("%Y-%m-%d")
-      }
-  ```
-
-- `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 - chrome console gives an invalid format warning when trying to insert a value that is not formatted in this way
+
+1. ```html
+   <input value='{{entity.birthday|date:"Y-m-d"}}' />
+   ```
+
+2. ```py
+   def edit_show(request, show_id):
+       selected_show = Show.objects.get(id=show_id)
+       context = {
+           'selected_show': selected_show,
+           'formatted_release_date': selected_show.release_date.strftime("%Y-%m-%d")
+       }
+   ```
+
+   - `<input value="{{ formatted_release_date }}" type="date" name="release_date">`
 
 ## Debugging Notes
 
@@ -224,21 +229,25 @@
 
 - Select python interpreter
 
-  1. Windows: `Ctrl+shift+P` Mac: `Cmd+shift+P`
-  2. Type: Python: Select Interpreter
-  3. Select the one with the path to your environment folder
-  4. Click debug icon in vscode side bar (bug icon `Ctrl+shift+D`)
-  5. click "**create a launch.json file**" link or gear icon
-  6. select python
-  7. select django
-     - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
+1. Windows: `Ctrl+shift+P` Mac: `Cmd+shift+P`
+2. Type: Python: Select Interpreter
+3. Select the one with the path to your environment folder
+4. Click debug icon in vscode side bar (bug icon `Ctrl+shift+D`)
+5. click "**create a launch.json file**" link or gear icon
+6. select python
+7. select django
+   - `launch.json` will be created - ok to close it. Can delete if you need to re-do this step.
 
 ---
 
 ### To Debug with breakpoints (won't auto reload on code changes)
 
 - **Stop server** `ctrl + c` then press play button in debug panel or press F5
-  - add a breakpoint by clicking to the LEFT of the line number so that a red circle appears
-  - everywhere you add a breakpoint, your app will pause running on this line until you use the debug control panel to continue
+- add a breakpoint by clicking to the LEFT of the line number so that a red circle appears
+- everywhere you add a breakpoint, your app will pause running on this line until you use the debug control panel to continue
 
 ---
+
+```
+
+```
