@@ -39,6 +39,7 @@
 
 ### 3. Create `DbContext` model
 
+- rename `ForumContext` to something relevant to your project
 - use your own model name and namespace
 
 - ```csharp
