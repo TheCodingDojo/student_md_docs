@@ -11,6 +11,7 @@
 
 1. `dotnet --version` (if it already shows 2.2.x, do not continue)
 2. `dotnet --list-sdks`
+   - version 2.2.x not listed? Go back to installation instructions and install it
 3. `dotnet new globaljson --sdk-version {{VERSION_NUMBER}}`
    - replace `{{VERSION_NUMBER}}` with the full 2.2 version number that was listed from in terminal
 4. `dotnet --version` should now show the new version number
