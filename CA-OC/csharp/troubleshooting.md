@@ -1,4 +1,8 @@
-# Omnisharp / 'image not found' error / go to definition broken
+# Csharp troubleshooting
+
+## Omnisharp / 'image not found' error / go to definition broken
+
+- Go to extensions in vscode -> click settings wheel for C# -> install another version -> go back 1 version
 
 ## Mac Installation
 
