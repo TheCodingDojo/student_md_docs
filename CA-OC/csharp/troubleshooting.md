@@ -5,9 +5,11 @@
 - `dotnet` not recognized after installing? Restart terminal and type `dotnet` again.
 - switch from version 3 to version 2
 
-1. `dotnet --list-sdks`
-2. `dotnet new globaljson --sdk-version {{VERSION_NUMBER}}`
+1. `dotnet --version` (if it already shows 2.2.x, do not continue)
+2. `dotnet --list-sdks`
+3. `dotnet new globaljson --sdk-version {{VERSION_NUMBER}}`
    - replace `{{VERSION_NUMBER}}` with the full 2.2 version number that was listed from in terminal
+4. `dotnet --version` should now show the new version number
 
 ## Mac
 
