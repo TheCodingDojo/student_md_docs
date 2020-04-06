@@ -8,6 +8,13 @@
 - **CHECK BOX:** "Configure MySQL Server as a Windows Service
 - **CHECK BOX:** "Start the MySQL Server at System Startup
 
+## Windows Uninstall
+
+- press windows key -> type "add or remove programs"
+- remove MySQL Workbench
+- restart computer
+- use above download link and follow the Windows Installation Video above
+
 ## Mac Installation Instructions
 
 - Use Download Link above
