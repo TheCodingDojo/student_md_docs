@@ -12,6 +12,7 @@
 ### CSS
 
 - [Complimentary Color Combinations](https://coolors.co/app)
+- [How to instantly make your front end projects look better](https://www.freecodecamp.org/news/how-to-make-your-front-end-projects/)
 
 ### Deployment
 
