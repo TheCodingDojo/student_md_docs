@@ -4,10 +4,15 @@
 
 - Go to extensions in vscode -> click settings wheel for C# -> install another version -> go back 1 version
 
-## Mac Installation
+---
+
+## Installation
 
 - `dotnet` not recognized after installing? Restart terminal and type `dotnet` again.
-- switch from version 3 to version 2
+
+---
+
+## Configure which dotnet version to use
 
 1. `dotnet --version` (if it already shows 2.2.x, do not continue)
 2. `dotnet --list-sdks`
@@ -16,42 +21,37 @@
    - replace `{{VERSION_NUMBER}}` with the full 2.2 version number that was listed from in terminal
 4. `dotnet --version` should now show the new version number
 
+---
+
 ## Mac
 
 - 'image not found' terminal error
   - `brew install mono` should fix without requiring extension downgrade
 
-## If still broken
+---
 
-- downgrade C# extension to 2nd most recent ver. via gear icon in extensions panel
+### open ssl already installed
+
+- no problem, skip the ssl steps
+
+---
 
 ## Session not persisting w/ MVC template
 
-- remove following lines from `Startup.cs`
+- [Remove Cookie Consent from Startup.cs](http://learn.codingdojo.com/m/25/5671/39759)
 
-- ```csharp
-  services.Configure<CookiePolicyOptions>(options =>
-  {
-    // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-    options.CheckConsentNeeded = context => true;
-    options.MinimumSameSitePolicy = SameSiteMode.None;
-  });
-  ```
-
-- ```csharp
-  app.UseHttpsRedirection();
-  ```
-
-- ```csharp
-  app.UseCookiePolicy();
-  ```
+---
 
 ## Custom Error Attributes
+
+---
 
 ### `[FutureDate]` example
 
 - if used with `[Required]`
   - need to add an if null check in future date code and return success to allow `[Required]` to handle the null
+
+---
 
 ### if breakpoint in `[FutureDate]` won't trigger, in controller:
 
@@ -66,14 +66,20 @@
     }
   ```
 
+---
+
 ## Non-invocable method error on methods that are invocable
 
 - re-build
+
+---
 
 ## Import Error on Run
 
 - remove special characters from folder names (the `:` and/or `#` were the culprit below)
 - `/usr/local/share/dotnet/sdk/2.2.107/15.0/Microsoft.Common.props(66,3): error MSB4019: The imported project "/Users/studentsname/Desktop/Professional Career/Coding Dojo/C#:.Net Core/Project/obj/Project.csproj.*.props" was not found. Confirm that the path in the <Import> declaration is correct, and that the file exists on disk. [/Users/studentsname/Desktop/Professional Career/Coding Dojo/C#:.Net Core/Project/Project.csproj]`
+
+---
 
 ## SQL null in query string
 
