@@ -51,8 +51,6 @@
 - if used with `[Required]`
   - need to add an if null check in future date code and return success to allow `[Required]` to handle the null
 
----
-
 ### if breakpoint in `[FutureDate]` won't trigger, in controller:
 
 - ```csharp
