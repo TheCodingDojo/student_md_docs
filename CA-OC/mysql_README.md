@@ -24,6 +24,7 @@
 - **CHECK BOX:** "Start the MySQL Server at System Startup
 - If mysql isn't recognized in termainl after installing
   - paste this in terminal: `alias mysql=/usr/local/mysql/bin/mysql`
+- if you can't figure out how to open MySql Workbench, you may need to install it separately [Download Workbench](https://dev.mysql.com/downloads/workbench/)
 
 ## Mac Uninstall Instructions [destroy-mysql](https://github.com/neilm813/destroy-mysql)
 
