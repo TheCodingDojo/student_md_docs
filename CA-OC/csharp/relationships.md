@@ -1,16 +1,39 @@
-# Model Example With 1:M & M:M
+# Relationship Advice
+
+## Determining The Relationship Status
+
+- Given two entities: `EntityA` and `EntityB`, ask the following questions
+
+1. Can **_One_** `EntityA` instance be related to **_Many_** `EntityB` instances?
+   - if yes, the relationship is **_One_** `EntityA` to **_Many_** `EntityB`
+2. Can **_One_** `EntityB` instance be related to **_Many_** `EntityA` instances?
+   - if yes to question 1 & question 2: the relationship is a **_Many_** to **_Many_**
+     - you need to create a third class to keep track of this relationship (see below example)
+   - if no to question 1 & yes to question 2, the relationship is **_One_** `EntityB` to **_Many_** `EntityA`
+
+- The Foreign Key (FK) goes on the
+  - **_Many_** class / model / entity
+  - if it is a **_Many_** to **_Many_** then both FKs go in the third class / model / entity
+
+---
+
+## Model Example With 1:M & M:M
+
 - `User` `Post` `Vote`
   - a `Post` as in posting on a forum
-- 1 `User` : M `Post`
+- 1 `User` : M `Post` (1 : Many)
   - `User` can make many `Post`s but `Post` can only be made by 1 `User`
-- M : M
-  - `User` can `Vote` many times & `Post` can be have many `Vote`s
-  - essentially two 1 : M
+- M : M (Many : Many)
+  - `User` can `Vote` many times & `Post` can have many `Vote`s
+  - essentially two 1 : M form a M : M
     - 1 `User` : M `Vote`
     - 1 `Post` : M `Vote`
 
-## `User` Model
-- ``` csharp
+---
+
+### `User` Model
+
+- ```csharp
   public class User
   {
     [Key] // denotes PK, not needed if formatted ModelNameId
@@ -49,8 +72,11 @@
   }
   ```
 
-## `Post` Model
-- ``` csharp
+---
+
+### `Post` Model
+
+- ```csharp
   public class Post
   {
     [Key]
@@ -74,8 +100,11 @@
   }
   ```
 
-## M:M Model / Table
-- ``` csharp
+---
+
+### M:M Model / Table
+
+- ```csharp
   public class Vote
   {
     public int VoteId { get; set; }

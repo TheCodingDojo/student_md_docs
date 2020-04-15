@@ -61,7 +61,7 @@
 
 ### 4. `ConfigureServices` method
 
-- add the below lines
+- add the below lines using your own context name instead of `ForumContext`
 
 - ```csharp
   services.AddDbContext<ForumContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
@@ -83,10 +83,10 @@
 - inside your controller class, at the top
 
 - ```csharp
-  private ForumContext _db;
+  private ForumContext db;
   public HomeController(ForumContext context)
   {
-    _db = context;
+    db = context;
   }
   ```
 
@@ -94,17 +94,22 @@
 
 ## Create DB (Migrate)
 
-### 8. `dotnet ef migrations add NameThisMigration`
+### 8. `dotnet ef migrations add GiveANameToThisMigration`
 
 ### 9. `dotnet ef database update`
 
 ### 10. Verify DB & Tables in workbench / mysql Shell
 
-## Access Session from Views Directly
+## Optional: Access Session from Views Directly
 
+- this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many actions
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
 - add `services.AddHttpContextAccessor();` in `ConfigureServices` in `Startup.cs`
 - Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
+
+## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/troubleshooting.md)
+
+## [Relationship Advice](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/relationships.md)
 
 ## Old stuff
 
