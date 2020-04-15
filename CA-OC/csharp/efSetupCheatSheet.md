@@ -5,8 +5,7 @@
 ## 1. Create New Project & Install Dependencies
 
 1. `dotnet new mvc --no-https -o ProjName`
-2. `dotnet add package MySql.Data.EntityFrameworkCore -v 8.0.11`
-3. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
+2. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
 
 ## Project Files Setup
 
@@ -106,3 +105,7 @@
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
 - add `services.AddHttpContextAccessor();` in `ConfigureServices` in `Startup.cs`
 - Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
+
+## Old stuff
+
+- `dotnet add package MySql.Data.EntityFrameworkCore -v 8.0.11`
