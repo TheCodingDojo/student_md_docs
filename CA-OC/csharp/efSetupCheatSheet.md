@@ -8,6 +8,7 @@
 
 1. `dotnet new mvc --no-https -o ProjName`
 2. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
+   - [Learn platform version number reference](http://learn.codingdojo.com/m/25/5675/40112)
 
 ---
 
