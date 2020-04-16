@@ -83,3 +83,9 @@
 
 - for nullable numerical types, C# will auto conver `null` to string when insterted into a string and turn it into `''` which will break if SQL is expecting either `null` or a numerical type
 - the string `'null'` needs to be concatenated into the query string
+
+## "Parameterless constructor" error
+
+- If you overloaded the default constructor (made your own constructor) you must add back in the default parameterless constructor
+  - `public ModelName () {}`
+    - ASP.NET depends on this constructor to automatically construct your models for you
