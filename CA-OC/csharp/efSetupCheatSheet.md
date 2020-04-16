@@ -2,14 +2,18 @@
 
 - open this file in VSCode and with it selected press `ctrl + shift + v` or right click it and open preview
 
+---
+
 ## 1. Create New Project & Install Dependencies
 
 1. `dotnet new mvc --no-https -o ProjName`
 2. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
 
+---
+
 ## Project Files Setup
 
-- delete following lines from `Startup.cs`
+- [delete following lines from `Startup.cs`](http://learn.codingdojo.com/m/25/5671/39759)
 
   - ```csharp
       services.Configure<CookiePolicyOptions>(options =>
@@ -25,6 +29,8 @@
 
 - delete `<partial name="_CookieConsentPartial"></partial>` from `_Layout.cs`
 
+---
+
 ### 2. `appsettings.json`
 
 - add "DBInfo" property (don't forget `,` that's needed before this new property)
@@ -35,6 +41,8 @@
         "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=YOUR_DB_NAME;SslMode=None"
       }
     ```
+
+---
 
 ### 3. Create `DbContext` model
 
@@ -57,7 +65,11 @@
   }
   ```
 
+---
+
 ## `Startup.cs`
+
+---
 
 ### 4. `ConfigureServices` method
 
@@ -69,6 +81,8 @@
   services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
   ```
 
+---
+
 ### 5. `Configure` method
 
 - add below lines above `app.UseMvc`
@@ -77,6 +91,8 @@
   app.UseStaticFiles();
   app.UseSession();
   ```
+
+---
 
 ### 6. Add Controller Constructor to Receive DbContext
 
@@ -90,15 +106,27 @@
   }
   ```
 
+---
+
 ### 7. Add Whatever Other Models You Need
+
+---
 
 ## Create DB (Migrate)
 
+---
+
 ### 8. `dotnet ef migrations add GiveANameToThisMigration`
+
+---
 
 ### 9. `dotnet ef database update`
 
+---
+
 ### 10. Verify DB & Tables in workbench / mysql Shell
+
+---
 
 ## Optional: Access Session from Views Directly
 
@@ -107,9 +135,15 @@
 - add `services.AddHttpContextAccessor();` in `ConfigureServices` in `Startup.cs`
 - Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
 
+---
+
 ## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/troubleshooting.md)
 
+---
+
 ## [Relationship Advice](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/relationships.md)
+
+---
 
 ## Old stuff
 
