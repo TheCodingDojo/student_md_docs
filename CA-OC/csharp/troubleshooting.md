@@ -89,3 +89,7 @@
 - If you overloaded the default constructor (made your own constructor) you must add back in the default parameterless constructor
   - `public ModelName () {}`
     - ASP.NET depends on this constructor to automatically construct your models for you
+
+## `.Include` 'DbSet' does not contain a definition for 'Include'
+
+- `using Microsoft.EntityFrameworkCore;`
