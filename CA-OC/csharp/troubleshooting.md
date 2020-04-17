@@ -36,6 +36,12 @@
 
 ---
 
+## NullReferenceException
+
+- The object you are trying to access properties on is null, look at where you tried to get the object from to find out where you could have gotten null from instead of what you wanted
+
+---
+
 ## Session not persisting w/ MVC template
 
 - [Remove Cookie Consent from Startup.cs](http://learn.codingdojo.com/m/25/5671/39759)
