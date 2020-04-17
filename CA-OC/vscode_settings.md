@@ -36,9 +36,6 @@
       "aspnetcorerazor": "html",
       "javascript": "javascriptreact",
   },
-  "files.associations": {
-      "*.cshtml": "html"
-  },
   ```
 
 ## Python
