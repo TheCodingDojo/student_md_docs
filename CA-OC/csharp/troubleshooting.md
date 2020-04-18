@@ -57,7 +57,7 @@
 - if used with `[Required]`
   - need to add an if null check in future date code and return success to allow `[Required]` to handle the null
 
-### if breakpoint in `[FutureDate]` won't trigger, in controller:
+### if breakpoint in `[FutureDate]` won't trigger, in controller
 
 - ```csharp
     if (newChef.DateOfBirth.Year == 1)
@@ -90,12 +90,29 @@
 - for nullable numerical types, C# will auto conver `null` to string when insterted into a string and turn it into `''` which will break if SQL is expecting either `null` or a numerical type
 - the string `'null'` needs to be concatenated into the query string
 
+---
+
 ## "Parameterless constructor" error
 
 - If you overloaded the default constructor (made your own constructor) you must add back in the default parameterless constructor
   - `public ModelName () {}`
     - ASP.NET depends on this constructor to automatically construct your models for you
 
+---
+
 ## `.Include` 'DbSet' does not contain a definition for 'Include'
 
 - `using Microsoft.EntityFrameworkCore;`
+
+---
+
+## Ambiguous route / multiple routes match
+
+- your controller has more than one method (action) with the same URL, change one of them
+
+---
+
+## Page not found
+
+- first determine if the page that is not found is due to the a redirect or not
+- put a `Console.WriteLine` or a breakpoint in the method (action) that is handling the **\*request**, if the `Console.WriteLine` happens or the breakpoint is triggered, then it is the redirect inside this method (action) that is likely causing the problem
