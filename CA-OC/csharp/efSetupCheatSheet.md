@@ -235,7 +235,8 @@
 - form submits to the route that matches the `action` attribute or the `asp-controller` and `asp-action`, MAY NEED TO ADD A ROUTE PARAMETER TO THE FORM if the controller method (action) that the `<form>` submits to needs more information
 
 - ```csharp
-  [HttpPost("/Quotes/Create")] public IActionResult Create(Quote newQuote)
+  [HttpPost("/Quotes/Create")]
+  public IActionResult Create(Quote newQuote)
   {
     if (ModelState.IsValid == false)
     {
