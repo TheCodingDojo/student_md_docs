@@ -121,4 +121,4 @@
 
 ## Authentication method 'caching_sha2_password' failed
 
-- run the mysql installer again and selected "reconfigure" then in Authentication Method tab, select "Use Legacy Authentication Method"
+- you forgot to select "Use Legacy Authentication Method" option when installing MySql, uninstall, restart computer then [reinstall](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/mysql_README.md)
