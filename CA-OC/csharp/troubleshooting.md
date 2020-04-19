@@ -116,3 +116,9 @@
 
 - first determine if the page that is not found is due to the a redirect or not
 - put a `Console.WriteLine` or a breakpoint in the method (action) that is handling the **\*request**, if the `Console.WriteLine` happens or the breakpoint is triggered, then it is the redirect inside this method (action) that is likely causing the problem
+
+---
+
+## Authentication method 'caching_sha2_password' failed
+
+- run the mysql installer again and selected "reconfigure" then in Authentication Method tab, select "Use Legacy Authentication Method"
