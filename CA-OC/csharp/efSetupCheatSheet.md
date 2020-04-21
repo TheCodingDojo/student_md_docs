@@ -252,6 +252,21 @@
 
 ---
 
+## ViewModel Review
+
+- if you have a view that needs to be sent more than one model, create a new model specifically for that view which contains all of the models it needs as properties
+
+### Example ViewModel containing multiple entities
+
+- page `X.`**_`cshtml`_** is used to create `EntityA` but also needs to display a list of `EntityB`
+- create a `XPage.`**_`cs`_** View**_Model_** which contains properties for everything that page needs
+  - `public EntityA NewEntityA { get; set; }`
+  - `public List<EntityB> ListOfB { get; set; }`
+- `X.`**_`cshtml`_** now has a `@model XPage` and the controller method (action) that returns this view needs to instantiate a `new XPage` model, assign a value to the properties `NewEntityA` and `ListOfB` and then pass this instance to the view
+- in the `asp-for` tag helpers, you can now use dot notation: `asp-for="NewEntityA.Name"`
+
+---
+
 ## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/troubleshooting.md)
 
 ---
