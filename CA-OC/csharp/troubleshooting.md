@@ -42,6 +42,11 @@
 
 ---
 
+## Foreign Key Constraint Failure
+
+- A foreign key is required on the model and was not provided, you need to provide it.
+- `someModelInstance.NameOfForeignKey = someInteger` where `someInteger` is the primary key of a different model
+
 ## Session not persisting w/ MVC template
 
 - [Remove Cookie Consent from Startup.cs](http://learn.codingdojo.com/m/25/5671/39759)
