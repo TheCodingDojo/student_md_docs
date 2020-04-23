@@ -2,9 +2,12 @@
 
 ## 1. Create New Project & Install Dependencies
 
-1. `dotnet new mvc --no-https -o ProjName`
-2. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
+1. open terminal
+2. `dotnet new mvc --no-https -o ProjName`
+3. `cd ProjName`
+4. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
    - [Learn platform version number reference](http://learn.codingdojo.com/m/25/5675/40112)
+5. `code .`
 
 ---
 
