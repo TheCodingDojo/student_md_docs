@@ -12,7 +12,9 @@
 
 ## What to focus on
 
-- For all stacks except Web Fund: **FOCUS** on FUNCTIONALITY and **RED BELT** requirements **FIRST**, do not spend a lot of time on CSS, until you have everything working
+- For all stacks except Web Fund: **focus on functionality and red belt requirements first**, do not spend a lot of time on CSS, until you have everything working
+
+---
 
 ## ABSOLUTELY NO sharing exam wire frame to those who haven't taken it yet
 
@@ -28,8 +30,6 @@
 ---
 
 ## Web Fund
-
----
 
 ### HTML & CSS Exam (**OPEN BOOK** - NO Helping Each other)
 
@@ -62,3 +62,5 @@
 ### Activities Exam
 
 - **_Activity_** is a reserved word in C#, DO NOT USE IT AS A MODEL NAME
+
+---
