@@ -61,6 +61,6 @@
 
 ### Activities Exam
 
-- **_Activity_** is a reserved word in C#, DO NOT USE IT AS A MODEL NAME
+- **activity** and **event** are reserved words in C#, DO NOT USE THEM
 
 ---
