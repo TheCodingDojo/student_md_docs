@@ -49,3 +49,8 @@
 
 4. Choose Your Own Adventure
    Are you stumped or not interested in the above causes? Build any other project that showcases the technical skills you’ve learned in the program.
+
+## List of deployed projects
+
+- [havenshearth.com](havenshearth.com)
+- [http://strivetogether.site/](http://strivetogether.site/)
