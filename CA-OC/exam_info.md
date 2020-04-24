@@ -2,11 +2,17 @@
 
 - It's common to have to re-take the exam, success rate is dramatically higher on the 2nd attempt.
 - **To enter code:** go to [https://learn.codingdojo.com/dashboard](https://learn.codingdojo.com/dashboard) or click back to tracks -> click exams at the top
-- 5 hour timer will start when exam code is entered
+- 5 hour timer will start when exam code is entered (DM **if you run out of time** and are close), 24 hours to deploy
 - **if done early, ask instructor for a pre-check**, we can tell you if something needs more work and you can use your remaining time to fix. If all red belt requirements are met, you can work on black belt requirements without worrying about breaking things.
 - **DO NOT LEAVE without showing your instructor your exam**
-- **NO HELPING EACH OTHER**
+- **NO HELPING EACH OTHER. It's easy to spot shared code**
 - open book / open notes / can use google
+
+---
+
+## What to focus on
+
+- For all stacks except Web Fund: **FOCUS** on FUNCTIONALITY and **RED BELT** requirements **FIRST**, do not spend a lot of time on CSS, until you have everything working
 
 ## ABSOLUTELY NO sharing exam wire frame to those who haven't taken it yet
 
@@ -40,20 +46,13 @@
 
 ## Python
 
-- **BEFORE** uploading or zipping and emailing: `pip freeze > requirements.txt`
-  - so we can recreate the `env` to test
-- **DELETE** `env` folder
-  - to reduce file size so upload will work
-- You can recreate your `env` later if needed
-  - after activating the recreated `env` run: `pip install -r requirements.txt`
-
 ---
 
 ## MERN
 
 - **BEFORE** uploading or zipping and emailing (to reduce file size):
-  - **DELETE** the `node_modules` folder on your back end
-  - **DELETE** the `node_modules` folder on the front-end inside your `client` folder
+  - **DELETE** the `node_modules` folder in your back end
+  - **DELETE** the `node_modules` folder in the front-end inside your `client` folder
 - You can recreate your `node_modules` later if needed by running `npm i` on the `server` level **AND** the `client` level
 
 ---
@@ -62,4 +61,4 @@
 
 ### Activities Exam
 
-- **_Activity_** is a reserverd word in C#, DO NOT USE IT AS A MODEL NAME
+- **_Activity_** is a reserved word in C#, DO NOT USE IT AS A MODEL NAME
