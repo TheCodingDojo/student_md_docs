@@ -49,17 +49,20 @@
 
   - if it is, move your project folder to a different location
 
-- **if you need to restart this process**, you must delete the hidden `.git` folder that is inside your project folder, look up how to see hidden folders on mac / windows. This `.git` folder is inside of every folder that you have ran `.git init` inside of
+- **if you need to restart this process**, you must delete the hidden `.git` folder that is inside your project folder, look up how to see hidden folders on mac / windows
 
 1. create a `.gitignore` file in your project folder if needed (you can google "name of stack `.gitignore`" for an example file)
 2. open terminal to your project folder
-3. `git init`
-4. `git add .`
-5. `git commit -m "first commit"`
-6. [create a repo on github](https://github.com/new)
+3. `git status`
+   - it should say: `fatal: not a git repository (or any of the parent directories): .git`
+   - if it does NOT say this, your project has already been initialized with `git init` or your project is nested inside of a folder that is already a git repo, move your project folder somewhere else
+4. `git init`
+5. `git add .`
+6. `git commit -m "first commit"`
+7. [create a repo on github](https://github.com/new)
    - after repo is created github will provide some steps:
-   1. paste the `git remote add` line to terminal
-   2. paste the `git push` line to terminal
+   1. paste the provided `git remote add` line to terminal
+   2. paste the provided `git push` line to terminal
    3. refresh github and you should see your code on there
       - make sure none of the folders/files in the `.gitignore` were added, if they were, restart
 
