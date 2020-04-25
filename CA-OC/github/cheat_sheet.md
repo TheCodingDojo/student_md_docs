@@ -41,6 +41,30 @@
 
 ---
 
+## Create a github repository for your project
+
+- there is a hidden `.git` folder that is inside of every folder that you have ran `.git init` from
+  - there ise also a hidden `.git` folder inside of any repository that you cloned
+- **your project folder must NOT be inside** of a folder that has already been initialized as a git repository
+
+  - if it is, move your project folder to a different location
+
+- **if you need to restart this process**, you must delete the hidden `.git` folder that is inside your project folder, look up how to see hidden folders on mac / windows. This `.git` folder is inside of every folder that you have ran `.git init` inside of
+
+1. create a `.gitignore` file in your project folder if needed (you can google "name of stack `.gitignore`" for an example file)
+2. open terminal to your project folder
+3. `git init`
+4. `git add .`
+5. `git commit -m "first commit"`
+6. [create a repo on github](https://github.com/new)
+   - after repo is created github will provide some steps:
+   1. paste the `git remote add` line to terminal
+   2. paste the `git push` line to terminal
+   3. refresh github and you should see your code on there
+      - make sure none of the folders/files in the `.gitignore` were added, if they were, restart
+
+---
+
 ## Branch Strategies / Collaboration
 
 ### Everything master branch - quick and easy
