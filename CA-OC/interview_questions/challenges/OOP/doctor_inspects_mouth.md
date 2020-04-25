@@ -1,6 +1,6 @@
 # README
 
-- Solution is INCOMPLETE
+- [Example](https://github.com/neilm813/MouthOopChallenge)
 
 ## Challenge Description
 
