@@ -271,27 +271,28 @@
 - this can be solved multiple ways
   1. you can send `EntityA` to be displayed, then render a partial for creating `EntityB`, the partial would `EntityB` as it's view model, but the partial would still need to be passed `EntityB`
   2. you can create a new view model for this page, a combined model that has a prop for both of the models that the page needs
+     - if returning the view to display error messages, this combined model would need to be returned in the same way it was for rendering the page in the first place
 
 #### Examples
 
-1. partial example
+##### 1. partial example
 
-   - ```csharp
-     @model EntityA
+- ```csharp
+  @model EntityA
 
-     <div>
-       @* display EntityA which is in the Model *@
-     </div>
+  <div>
+    @* display EntityA which is in the Model *@
+  </div>
 
-     @{
-       EntityB newB = new EntityB();
-      }
+  @{
+    EntityB newB = new EntityB();
+  }
 
-     <partial name="_newModelB" model="@newB"></partial>
-     ```
+  <partial name="_newModelB" model="@newB"></partial>
+  ```
 
-     - if `newB` was related to `EntityA` where `EntityB` is the many, so it needs a foreign key corresponding to the primary key of `EntityA`, that foreign key could be set in the razor code block before being passed to the partial
-       - `newB.EntityAId = Model.EntityAId;`
+  - if `newB` was related to `EntityA` where `EntityB` is the many, so it needs a foreign key corresponding to the primary key of `EntityA`, that foreign key could be set in the razor code block before being passed to the partial
+    - `newB.EntityAId = Model.EntityAId;`
 
 ---
 
