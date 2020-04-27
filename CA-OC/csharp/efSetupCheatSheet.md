@@ -296,6 +296,12 @@
 
 ---
 
+## Validation review
+
+- when you `return View` to display error validations, if this page was originally passed a model, then you must pass that same model (data) to it again
+
+---
+
 ## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/troubleshooting.md)
 
 ---
