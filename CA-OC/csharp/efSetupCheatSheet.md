@@ -265,77 +265,33 @@
 
 ### Display AND create on same page
 
-- if you have a view whose model (for displaying) is `EntityA`
+- if you have a view whose model (for displaying) is `EntityA` (or a list of `EntityA`)
 - and the same view is used to create `EntityB`
-- and `EntityB` needs a foreign key (FK) from `EntityA`, e.g., `EntityB.EntityAId`
-- you can make the view model: `EntityA`
+- your problem is that this one view has two view models that it needs
+- this can be solved multiple ways
+  1. you can send `EntityA` to be displayed, then render a partial for creating `EntityB`, the partial would `EntityB` as it's view model, but the partial would still need to be passed `EntityB`
+  2. you can create a new view model for this page, a combined model that has a prop for both of the models that the page needs
 
-  - INSIDE the view, write a razor code block to instantiate a new empty `EntityB`
-  - assign the foreign key: `newEntityB.EntityAId = Model.EntityAId`
-  - pass the `newEntityB` to a partial view that displays the form `<partial name="_partialViewName" model="@newEntityB></partial>`
-  - the partial has it's own view model which is `EntityB` used for creating a new `EntityB` when form submitted
-  - alternatively, instead of instantiating in the view to add the FK, you can use `ViewBag` to store the FK and put the FK as a route param on the form
+#### Examples
 
----
+1. partial example
 
-#### Intantiate in view method
+   - ```csharp
+     @model EntityA
 
-- ```csharp
-  @model FoodTruck
+     <div>
+       @* display EntityA which is in the Model *@
+     </div>
 
-  @* HTML displaying the @Model *@
+     @{
+       EntityB newB = new EntityB();
+      }
 
-  @{
-    Review newReview = new Review();
-    newReview.FoodTruckId = Model.FoodTruckId;
-  }
+     <partial name="_newModelB" model="@newB"></partial>
+     ```
 
-  <partial name="_NewReview" model="@newReview"></partial>
-  ```
-
-  - the form in the partial view:
-
-    - ```csharp
-      @model Review
-
-      <form asp-controller="FoodTrucks" asp-action="ReviewTruck" method="POST">
-      ```
-
-      - the action that this form submits to receives a `Review` that already has the food truck FK added to it
-
----
-
-#### `ViewBag` method instead of instantiating in view
-
-- ```csharp
-  @model FoodTruck
-
-  @* HTML displaying the @Model *@
-
-  @{
-    Review newReview = new Review();
-    newReview.FoodTruckId = Model.FoodTruckId;
-  }
-
-  <partial name="_NewReview"></partial>
-  ```
-
-  - the form in the partial view:
-
-    - ```csharp
-      @model Review
-
-      <form
-        asp-controller="FoodTrucks"
-        asp-action="ReviewTruck"
-        asp-route-foodTruckId="@ViewBag.FoodTruckId"
-        method="POST"
-      >
-      ```
-
-      - the model doesn't need to be passed to the partial view
-      - the action that this form submits to receives a `Review` that DOES NOT have the food truck FK added
-      - the action has URL / route parameter with the food truck FK in it that will then be added to the `Review` in the controller instead
+     - if `newB` was related to `EntityA` where `EntityB` is the many, so it needs a foreign key corresponding to the primary key of `EntityA`, that foreign key could be set in the razor code block before being passed to the partial
+       - `newB.EntityAId = Model.EntityAId;`
 
 ---
 
@@ -350,3 +306,7 @@
 ## Old stuff
 
 - `dotnet add package MySql.Data.EntityFrameworkCore -v 8.0.11`
+
+```
+
+```
