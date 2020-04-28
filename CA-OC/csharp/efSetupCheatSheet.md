@@ -123,6 +123,8 @@
 
 ### 9. `dotnet ef database update`
 
+- **EVERY time you change your models you must migrate and then update database**
+
 ---
 
 ### 10. Verify DB & Tables in workbench / mysql Shell
