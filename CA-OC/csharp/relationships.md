@@ -11,9 +11,32 @@
      - you need to create a third class to keep track of this relationship (see below example)
    - if no to question 1 & yes to question 2, the relationship is **_One_** `EntityB` to **_Many_** `EntityA`
 
-- The Foreign Key (FK) goes on the
-  - **_Many_** class / model / entity
-  - if it is a **_Many_** to **_Many_** then both FKs go in the third class / model / entity
+### _One_ `EntityA` to _Many_ `EntityB`
+
+- the foreign key goes on the many, so `EntityB` gets a `public int EntityAId { get; set; }` added to it
+- `EntityA` gets a `List<EntityB>`
+- reverse if the relationship is the other way around
+
+### _Many_ to _Many_ between `EntityA` and `EntityB`
+
+- the new class / model / entity that is created gets it's **own primary key** and a **foreign key from each related model** and a **property of each related model data type**
+
+- ```csharp
+
+  [Key]
+  public int NewModelNameId { get; set; }
+
+  public int EntityAId { get; set; }
+  public int EntityBId { get; set; }
+
+  // navigation properties
+  public EntityA EntityA { get; set; }
+  public EntityB EntityB { get; set; }
+  ```
+
+  - **BOTH `EntityA` and `EntityB` would then get a navigation property** `public List<NewModelName> NewModelNames { get; set; }`
+  - sometimes it makes more sense to name the navigation property something other than the name of the class itself
+  - e.g., instead of `public User User { get; set; }` it could be `public User Author { get; set; }`
 
 ---
 
