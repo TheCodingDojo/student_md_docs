@@ -131,7 +131,7 @@
 
 ---
 
-## Optional: Access Session from Views Directly
+### 11. Access Session from Views Directly
 
 - this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many actions
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
