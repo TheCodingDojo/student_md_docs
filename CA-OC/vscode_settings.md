@@ -31,6 +31,8 @@
   "editor.wordWrap": "on",
   "editor.detectIndentation": true,
   "editor.renderWhitespace": "selection",
+  "workbench.editor.enablePreview": false,
+  "explorer.compactFolders": false,
   "emmet.includeLanguages": {
       "razor": "html",
       "aspnetcorerazor": "html",
