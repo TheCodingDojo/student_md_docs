@@ -12,29 +12,9 @@
 
 ---
 
-## Project Files Setup
+## 2. `appsettings.json`
 
-- [delete following lines from `Startup.cs`](http://learn.codingdojo.com/m/25/5671/39759)
-
-  - ```csharp
-      services.Configure<CookiePolicyOptions>(options =>
-      {
-        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-        options.CheckConsentNeeded = context => true;
-        options.MinimumSameSitePolicy = SameSiteMode.None;
-      });
-    ```
-
-  - `app.UseHttpsRedirection();`
-  - `app.UseCookiePolicy();`
-
-- delete `<partial name="_CookieConsentPartial"></partial>` from `_Layout.cs`
-
----
-
-### 2. `appsettings.json`
-
-- add "DBInfo" property (don't forget `,` that's needed before this new property)
+- add `"DBInfo"` property, don't forget the `,` that is needed between each property
 
   - ```json
       "DBInfo": {
@@ -45,46 +25,83 @@
 
 ---
 
-### 3. Create `DbContext` model
+## 3. Create basic `User` model in `Models` folder
 
-- rename `ForumContext` to something relevant to your project
-- use your own model name and namespace
+- right click in file pane -> New C# Class
+  - this should create the `namespace` line for you with your own project name
+- you can add the rest of the properties to this later or delete it if you don't need it
+
+- ```csharp
+  namespace ProjName.Models
+  {
+      public class User
+      {
+        [Key] // the below prop is the primary key, [Key] is not needed if named with pattern: ModelNameId
+        public int UserId { get; set; }
+
+        [Required(ErrorMessage = "is required")]
+        [MinLength(2, ErrorMessage = "must be at least 2 characters")]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+      }
+  }
+  ```
+
+## 4. Create `DbContext` model
+
+- **_only add `DbSet` for your models_**
 
 - ```csharp
   using Microsoft.EntityFrameworkCore;
 
-  namespace Forum.Models
+  namespace ProjName.Models
   {
-    public class ForumContext : DbContext
+    public class ProjNameContext : DbContext
     {
-      public ForumContext(DbContextOptions options) : base(options) { }
-      // tables in db
+      public ProjNameContext(DbContextOptions options) : base(options) { }
+
+      // for every model / entity that is going to be part of the db
+      // the names of these properties will be the names of the tables in the db
       public DbSet<User> Users { get; set; }
-      public DbSet<Post> Posts { get; set; }
-      public DbSet<Vote> Votes { get; set; }
+      public DbSet<Widget> Widgets { get; set; }
+      public DbSet<Item> Items { get; set; }
     }
   }
   ```
 
 ---
 
-## `Startup.cs`
+## 5. [Delete the following lines from `Startup.cs`](http://learn.codingdojo.com/m/25/5671/39759)
+
+- ```csharp
+    services.Configure<CookiePolicyOptions>(options =>
+    {
+      // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+      options.CheckConsentNeeded = context => true;
+      options.MinimumSameSitePolicy = SameSiteMode.None;
+    });
+  ```
+
+- `app.UseHttpsRedirection();`
+- `app.UseCookiePolicy();`
+
+- delete `<partial name="_CookieConsentPartial"></partial>` from `_Layout.cs`
 
 ---
 
-### 4. `ConfigureServices` method
+## 6. `ConfigureServices` method in `Startup.cs`
 
-- add the below lines using your own context name instead of `ForumContext`
+- add the below lines using your own context name instead of `ProjNameContext`
 
 - ```csharp
-  services.AddDbContext<ForumContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+  services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
   services.AddSession();
   services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
   ```
 
 ---
 
-### 5. `Configure` method
+## 7. `Configure` method
 
 - add below lines above `app.UseMvc`
 
@@ -95,7 +112,7 @@
 
 ---
 
-### 6. Add Controller Constructor to Receive DbContext
+## 8. Add Controller Constructor to Receive DbContext (IN EVERY CONTROLLER YOU MAKE)
 
 - inside your controller class, at the top
 
@@ -109,34 +126,40 @@
 
 ---
 
-### 7. Add Whatever Other Models You Need
-
----
-
 ## Create DB (Migrate)
 
 ---
 
-### 8. `dotnet ef migrations add GiveANameToThisMigration`
+### 9. `dotnet ef migrations add GiveANameToThisMigration`
 
 ---
 
-### 9. `dotnet ef database update`
+### 10. `dotnet ef database update`
 
 - **EVERY time you change your models you must migrate and then update database**
 
 ---
 
-### 10. Verify DB & Tables in workbench / mysql Shell
+### 11. Verify DB & Tables in workbench or mysql Shell
+
+- you should see a `users` table with columns: `UserId` and `FirstName`
 
 ---
 
-### 11. Access Session from Views Directly
+## 12. Access Session from Views Directly
 
 - this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many actions
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
 - add `services.AddHttpContextAccessor();` in `ConfigureServices` in `Startup.cs`
 - Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
+
+---
+
+## 13. Create Other Models and [Relationships](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/relationships.md)
+
+- set up one relationship at a time
+  - then migrate and update database again
+    - this way, if the migration fails, you know that which relationship you ruined
 
 ---
 
@@ -315,7 +338,3 @@
 ## Old stuff
 
 - `dotnet add package MySql.Data.EntityFrameworkCore -v 8.0.11`
-
-```
-
-```
