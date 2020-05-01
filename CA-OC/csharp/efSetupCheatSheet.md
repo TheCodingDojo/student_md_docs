@@ -136,6 +136,7 @@
 
 ### 10. `dotnet ef database update`
 
+- **EVERY time you migrate you need to update for the database to update**
 - **EVERY time you change your models you must migrate and then update database**
 
 ---
