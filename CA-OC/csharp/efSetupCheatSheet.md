@@ -12,7 +12,7 @@
 
 ---
 
-## 2. `appsettings.json`
+## 2. `appsettings.json` (add your own db name and change password if needed)
 
 - add `"DBInfo"` property, don't forget the `,` that is needed between each property
 
