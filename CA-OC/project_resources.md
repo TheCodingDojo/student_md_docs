@@ -2,26 +2,28 @@
 
 - see stack folder for specific project resources
 
-## Links
-
-### APIs
+## APIs
 
 - [A collective list of free APIs](https://github.com/public-apis/public-apis)
 - [Collective COVID-19 API List from Postman](https://covid-19-apis.postman.com/?mkt_tok=eyJpIjoiT1RrelpqUm1aamRqWlRJNSIsInQiOiJOeVRxZ0JXUW1hY21HekQ1U1hCXC9QZ00zSm9xc1F5UDluYWFIbkk3aFFFTWNUcURkVmd0dEtvOGJnbzVzdzFoODF0S0VpWXpDVElsNXZUY29iU0djOEIySDRLeWlFK3FrUFB6MlRCZUZnb1VkS3VPeG5VclZQZWx6dTZuVGNMVlEifQ%3D%3D)
 
-### CSS
+## CSS
 
 - [Complimentary Color Combinations](https://coolors.co/app)
 - [How to instantly make your front end projects look better](https://www.freecodecamp.org/news/how-to-make-your-front-end-projects/)
 
-### Deployment
+## Deployment
 
 - [Free SSL/TLS Certifications for HTTPS](https://letsencrypt.org/)
 
-### Mockups / Wireframe
+## Mockups / Wireframe
 
 - [https://miro.com/](https://miro.com/)
 - [https://awwapp.com/](https://awwapp.com/)
+
+## Logos
+
+- [designevo](https://www.designevo.com/logo-maker/)
 
 ## Ideas
 
