@@ -69,7 +69,7 @@
 #### With `.forEach`
 
 - ```js
-  const printOneItem = item => {
+  const printOneItem = (item) => {
     console.log(`The item is: ${item}`);
   };
 
@@ -98,7 +98,7 @@
 - ```js
   // multiple syntax variations that do the same thing:
 
-  nums.forEach(function(item, idx) {
+  nums.forEach(function (item, idx) {
     console.log(`The item is: ${item}. The index is: ${idx}`);
   });
 
@@ -128,7 +128,7 @@
 
 - ```js
   // Add new method to the Array.prototype so every array has access to it
-  Array.prototype.forEvery = function(callback) {
+  Array.prototype.forEvery = function (callback) {
     // this keyword will refer to the array that .forEvery is called on
 
     for (let i = 0; i < this.length; ++i) {
@@ -138,7 +138,9 @@
   };
 
   // call our newly added method on the nums array
-  numbers.forEvery((item, idx) => console.log(`Item: ${item} at Idx ${idx}`));
+  numbers.forEvery((item, idx) => {
+    console.log(`Item: ${item} at Idx ${idx}`);
+  });
   ```
 
 ---
@@ -155,7 +157,7 @@
 ### Create a new array with each int doubled without `.map`
 
 - ```js
-  const doubleNums = nums => {
+  const doubleNums = (nums) => {
     const doubledNums = [];
 
     for (let i = 0; i < nums.length; ++i) {
@@ -175,7 +177,9 @@
 - `.map` does all of this for us, all it needs to know, is what do we want the new item to be on each iteration
 
 - ```js
-  const doubledNums = numbers.map(num => num * 2);
+  const doubledNums = numbers.map((num) => {
+    return num * 2;
+  });
   console.log(doubledNums);
   ```
 
@@ -184,7 +188,7 @@
 ### Recreate `.map`
 
 - ```js
-  Array.prototype.map2 = function(callBack) {
+  Array.prototype.map2 = function (callBack) {
     const newArr = [];
 
     for (let i = 0; i < this.length; i++) {
@@ -231,7 +235,10 @@
 #### With named func
 
 - ```js
-  const isEven = num => num % 2 === 0;
+  const isEven = (num) => {
+    return num % 2 === 0;
+  };
+
   const evensOnly = numbers.filter(isEven);
 
   console.log(evensOnly);
@@ -242,7 +249,7 @@
 #### With anon func
 
 - ```js
-  const dontBeOdd = numbers.filter(function(num) {
+  const dontBeOdd = numbers.filter(function (num) {
     return num % 2 === 0;
   });
 
@@ -254,7 +261,7 @@
 #### Recreate `.filter`
 
 - ```js
-  Array.prototype.where = function(callback) {
+  Array.prototype.where = function (callback) {
     const filteredArr = [];
 
     for (let i = 0; i < this.length; ++i) {
