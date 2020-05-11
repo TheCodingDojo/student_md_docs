@@ -12,3 +12,7 @@
 ## Patterns
 
 - [Don’t Use Boolean Arguments, Use Enums](https://medium.com/better-programming/dont-use-boolean-arguments-use-enums-c7cd7ab1876a)
+
+## Lessons
+
+- [Security Vulnerability Lessons](https://www.hacksplaining.com/)
