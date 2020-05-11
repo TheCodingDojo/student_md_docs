@@ -36,7 +36,7 @@
   "emmet.includeLanguages": {
       "razor": "html",
       "aspnetcorerazor": "html",
-      "javascript": "javascriptreact",
+      "javascript": "javascriptreact", // or use .jsx file extension instead
   },
   ```
 
