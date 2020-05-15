@@ -13,3 +13,4 @@
 ### SQL
 
 - [First, Second, and Third Normal Forms](https://www.dummies.com/programming/sql/sql-first-second-and-third-normal-forms/)
+- [Multiple Joins Illustrated](https://www.interfacett.com/blogs/multiple-joins-work-just-like-single-joins/)
