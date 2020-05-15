@@ -21,3 +21,5 @@
     - including sending in invalid lengths or missing keys that are required
 13. from `client` folder run react app with `npm start`
     - you should have two VSCode terminals open, one open to `client` folder running the react app and one open to `server` folder running your `server.js`
+
+## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/mern/troubleshooting.md)
