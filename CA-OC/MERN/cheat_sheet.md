@@ -6,7 +6,7 @@
 2. `mkdir {{PROJECT_NAME}}`
 3. `cd {{PROJECT_NAME}}`
 4. `code .` to open VSCode to `{{PROJECT_NAME}}` folder
-5. in VSCode terminal: `npm init -y` to initialize a new back-end node project (your server) with a `package.json`
+5. in VSCode terminal: `npm init -y` to initialize a new EMPTY back-end node project (your server) with a `package.json`
 6. install back-end dependencies, usually `npm i express mongoose cors`
    - your back-end `package.json` should now show have these dependencies listed
 7. create `server` folder
@@ -14,7 +14,7 @@
 9. open a 2nd VSCode terminal (split terminal icon or plus icon) and `cd client` when it's done being created
 10. install front-end dependencies, usually `npm i axios @reach/router`
     - your front-end `package.json` (inside `client` folder) should now have these dependencies listed
-11. create the modularized back-end folder structure and files in the `server` folder
+11. create the modularized back-end folder structure and files in the `server` folder following the learn platform or lecture video / lecture code
     - `cd` to `server` folder in other VSCode terminal and run server with `nodemon server.js`
       - one VSCode terminal should be open to `client` folder and one should be open to `server` folder
 12. Test all back-end CRUD functionality using postman
