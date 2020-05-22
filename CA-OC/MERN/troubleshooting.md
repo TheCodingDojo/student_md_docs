@@ -23,3 +23,8 @@
 
 - the component being updated is no longer "mounted", no longer displayed
 - usually happens if you go to a different page while an HTTP request (like an API request) was still pending for the previous page and then it finishes but that page is no longer active so the component cannot be updated
+
+## Deployment
+
+- `mv: cannot stat 'build': No such file or directory`
+  - you forgot the deployment step that has you delete the `.gitignore` in the `client` folder, search `gitignore` on the deployment steps page
