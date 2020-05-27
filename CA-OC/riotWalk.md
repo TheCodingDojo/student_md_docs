@@ -34,6 +34,7 @@
 - asterisk any code you are unsure about the syntax or if it works to make sure the interviewer doesn't get the wrong impression thinking that you are overly confident about things that you are not confident about
   - you can also double check with the interviewer on some syntax or what order the arguments go in if you forget, they will often help because they'd rather see you focus on the meat of the problem
 - leave a lot of space between lines to make it easy to edit on the whiteboard
+- you can draw vertical lines for indendation to help you stay organized and remember to close brackets / braces / parenthesis
 
 ---
 
