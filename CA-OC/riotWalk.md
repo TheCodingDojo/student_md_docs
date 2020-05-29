@@ -19,6 +19,13 @@
 
 ---
 
+## Test Cases
+
+- Related to input / output, but with some focus on edge cases, bad inputs, and very large inputs
+  - Do you need to worry about bad inputs? Ask and you may be told to assume the input will be valid or always structured a certain way or the given array will be non-empty
+
+---
+
 ## Walk
 
 - Before you start writing, **walk** through your initial though process on how to approach the problem, check to see how the interviewer reacts to your thought process, they want to see how you think and communicate code concepts and approaches, but they also might reveal a facial expression that alerts you that your approach has a problem or is going down a completely wrong path

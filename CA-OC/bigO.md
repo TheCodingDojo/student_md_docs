@@ -23,6 +23,10 @@
 - `O(n * n)` -> `O(n^2)`
 - basic example is `i` loop over array with a nested `j` loop over same array, even if `j = i + 1` it still grows
 
+### Cubed: `O(n^3)`
+
+- like `O(n^2)` but worse, 3 loops, all nested one after the other
+
 ### Polynomial: `O(n * m)`
 
 - could be worse than `n^2`, would be better, could be linear
