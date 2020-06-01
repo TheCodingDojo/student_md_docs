@@ -2,6 +2,12 @@
 
 - [Download Link](https://dev.mysql.com/downloads/mysql/)
 
+## If you are having problems
+
+1. follow uninstall steps below
+2. follow install steps below
+3. follow testing steps below
+
 ---
 
 ## [Windows Installation Video](https://www.youtube.com/watch?v=u96rVINbAUI)
