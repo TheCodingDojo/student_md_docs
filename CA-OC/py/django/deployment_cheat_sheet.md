@@ -2,6 +2,7 @@
 
 - create an AWS account then go to [AWS Management Console](https://us-west-1.console.aws.amazon.com/console/home?region=us-west-1)
 - [AWS page for after you have an instance set up](https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#Instances:sort=instanceId)
+- [Deployment Vid from 05/2020](https://vimeo.com/421290939/4378c2279e)
 
 ---
 
