@@ -7,3 +7,7 @@
 ## File Upload
 
 - [Instructor Will's Base64 File Upload](https://github.com/wgoode3/file-upload-component)
+
+## Export / Import Database data
+
+- [Export Docs](https://docs.mongodb.com/manual/reference/program/mongoexport/)
