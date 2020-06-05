@@ -11,3 +11,7 @@
 ## Export / Import Database data
 
 - [Export Docs](https://docs.mongodb.com/manual/reference/program/mongoexport/)
+
+## Updating Schema
+
+- [Update Script Example](https://hashnode.com/post/how-do-you-update-schema-changes-in-mongodb-ciwsye7me00jpy35320lv3mne)
