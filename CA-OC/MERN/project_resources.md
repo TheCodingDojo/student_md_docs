@@ -15,3 +15,10 @@
 ## Updating Schema
 
 - [Update Script Example](https://hashnode.com/post/how-do-you-update-schema-changes-in-mongodb-ciwsye7me00jpy35320lv3mne)
+
+## State
+
+### Nested state edit
+
+- [Example Repo](https://github.com/neilm813/react-hook-form-edit-nested)
+  - contains multiple `App.js` files with different techniques
