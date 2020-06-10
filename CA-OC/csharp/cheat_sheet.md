@@ -96,6 +96,7 @@
 - ```csharp
   services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
   services.AddSession();
+  // this line should already be there:
   services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
   ```
 
@@ -117,8 +118,8 @@
 - inside your controller class, at the top
 
 - ```csharp
-  private ForumContext db;
-  public HomeController(ForumContext context)
+  private ProjNameContext db;
+  public HomeController(ProjNameContext context)
   {
     db = context;
   }
