@@ -20,7 +20,7 @@
       "DBInfo": {
         "Name": "MySqlConnection",
         "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=YOUR_DB_NAME;SslMode=None"
-      }
+      },
     ```
 
 ---
