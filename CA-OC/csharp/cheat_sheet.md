@@ -12,7 +12,7 @@
 
 ---
 
-## 2. `appsettings.json` (add your own db name and change password if needed)
+## 2. `appsettings.json` (**_add your own db name_** and change password if needed)
 
 - add `"DBInfo"` property, don't forget the `,` that is needed between each property
 
@@ -43,6 +43,9 @@
         [MinLength(2, ErrorMessage = "must be at least 2 characters")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
       }
   }
   ```
@@ -87,14 +90,25 @@
 
 - delete `<partial name="_CookieConsentPartial"></partial>` from `_Layout.cs`
 
+## 6. Access Session from Views Directly
+
+- this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many controller actions
+- add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
+  - this is available from the corresponding `services.AddHttpContextAccessor();` in `Startup.cs`
+- Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
+
 ---
 
-## 6. `ConfigureServices` method in `Startup.cs`
+---
+
+## 7. `ConfigureServices` method in `Startup.cs`
 
 - add the below lines using your own context name instead of `ProjNameContext`
 
 - ```csharp
   services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+  // to access session directly from view in combination with @using in _ViewImports
+  services.AddHttpContextAccessor();
   services.AddSession();
   // this line should already be there:
   services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -102,7 +116,7 @@
 
 ---
 
-## 7. `Configure` method
+## 8. `Configure` method in `Startup.cs`
 
 - add below lines above `app.UseMvc`
 
@@ -113,7 +127,7 @@
 
 ---
 
-## 8. Add Controller Constructor to Receive DbContext (IN EVERY CONTROLLER YOU MAKE)
+## 9. Add Controller Constructor to Receive DbContext (IN EVERY CONTROLLER YOU MAKE)
 
 - inside your controller class, at the top
 
@@ -131,29 +145,20 @@
 
 ---
 
-### 9. `dotnet ef migrations add GiveANameToThisMigration`
+### 10. `dotnet ef migrations add GiveANameToThisMigration`
 
 ---
 
-### 10. `dotnet ef database update`
+### 11. `dotnet ef database update`
 
 - **EVERY time you migrate you need to update for the database to update**
 - **EVERY time you change your models you must migrate and then update database**
 
 ---
 
-### 11. Verify DB & Tables in workbench or mysql Shell
+### 12. Verify DB & Tables in workbench or mysql Shell
 
 - you should see a `users` table with columns: `UserId` and `FirstName`
-
----
-
-## 12. Access Session from Views Directly
-
-- this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many actions
-- add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
-- add `services.AddHttpContextAccessor();` in `ConfigureServices` in `Startup.cs`
-- Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
 
 ---
 
