@@ -1,5 +1,7 @@
 # EF Setup Cheat Sheet
 
+- **click the lightbulb for recommended `using` imports**
+
 ## 1. Create New Project & Install Dependencies
 
 1. open terminal
