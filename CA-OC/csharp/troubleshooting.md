@@ -42,6 +42,18 @@
 
 ---
 
+## Reset Database
+
+1. drop the migrations table in the db
+2. delete migrations folder in project
+3. fix models
+4. `dotnet ef migrations add NameTheMigration`
+5. `dotnet ef database update`
+
+- If that doesn't work: delete migrations folder, drop database then migrate and update again to completely recreate the db (losing all data)
+
+---
+
 ## Foreign Key Constraint Failure
 
 - A foreign key is required on the model and was not provided, you need to provide it.
