@@ -162,6 +162,16 @@
 
 - you should see a `users` table with columns: `UserId` and `FirstName`
 
+1. Open MySQL Workbench
+2. Click local instance and enter pw if needed
+3. On left panel if you don't see your databases listed, click on Schemas tab in bottom left
+4. If you don't see your database's name, click the refresh button top left
+5. Expand your database name
+6. Expand Tables
+7. However over users and click the small table icon with a lightning bolt on it
+   - this runs a select all columns and all rows from the table so you can see the columns and rows in the results view below
+   - there will be no rows since db is empty
+
 ---
 
 ## 13. Create Other Models and [Relationships](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/csharp/relationships.md)
