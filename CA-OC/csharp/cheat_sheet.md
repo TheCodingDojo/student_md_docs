@@ -14,7 +14,7 @@
 
 ---
 
-## 2. `appsettings.json` (**_add your own db name_** and change password if needed)
+## 2. `appsettings.json` (UPDATE DB NAME AND PASSWORD)
 
 - add `"DBInfo"` property, don't forget the `,` that is needed between each property
 
