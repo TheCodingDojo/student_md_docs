@@ -16,7 +16,7 @@
 
 ## 2. `appsettings.json` (UPDATE DB NAME AND PASSWORD)
 
-- add `"DBInfo"` property, don't forget the `,` that is needed between each property
+- add the below, **INSIDE** existing curly braces, **_don't forget the comma_** that's needed between JSON properties
 
   - ```json
       "DBInfo": {
@@ -54,7 +54,7 @@
 
 ## 4. Create `DbContext` model
 
-- **_only add `DbSet` for your models_**
+- this is how the ORM knows which tables in DB are connected to which models / classes
 
 - ```csharp
   using Microsoft.EntityFrameworkCore;
@@ -73,6 +73,10 @@
     }
   }
   ```
+
+  - the `options` come from `Startup.cs` code we are going to add, aka **dependency injection**
+  - `DbSet` is an `IEnummerable` of all rows in that DB table
+  - `base(options)` is calling the inherited base constructor from inherited `DbContext` and passing the `options` to the parent constructor
 
 ---
 
@@ -101,17 +105,17 @@
 
 ---
 
----
-
 ## 7. `ConfigureServices` method in `Startup.cs`
 
 - add the below lines using your own context name instead of `ProjNameContext`
+- `AddDbContext` is creating the options that will be passed to our `ProjNameContext` model
 
 - ```csharp
   services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
   // to access session directly from view in combination with @using in _ViewImports
   services.AddHttpContextAccessor();
   services.AddSession();
+
   // this line should already be there:
   services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
   ```
@@ -123,6 +127,7 @@
 - add below lines above `app.UseMvc`
 
 - ```csharp
+  // css, js, and image files can now be added to wwwroot folder
   app.UseStaticFiles();
   app.UseSession();
   ```
@@ -140,6 +145,8 @@
     db = context;
   }
   ```
+
+  - you can create a 2nd controller with the same pattern as above, just give the controller a new name
 
 ---
 
