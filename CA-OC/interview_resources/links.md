@@ -1,18 +1,37 @@
 # Interview Resources
 
+## Data Structures
+
+- [Everything you need to know about tree data structures](https://www.freecodecamp.org/news/all-you-need-to-know-about-tree-data-structures-bceacb85490c/)
+
+---
+
 ## Job Seeking
 
 - [Job Postings in HTTP Headers](https://frenxi.com/http-headers-you-dont-expect/)
 
+---
+
 ## Algorithms
 
+---
+
+## Big O
+
 - [bigocheatsheet.com](https://www.bigocheatsheet.com/)
+- [8 time complexities that every programmer should know](https://adrianmejia.com/most-popular-algorithms-time-complexity-every-programmer-should-know-free-online-tutorial-course/)
+
+---
 
 ## Design Patterns
 
 - [Gang of Four 23 Design Patterns](http://geekswithblogs.net/subodhnpushpak/archive/2009/09/18/the-23-gang-of-four-design-patterns-.-revisited.aspx)
 
+---
+
 ## Database
+
+---
 
 ### SQL
 
