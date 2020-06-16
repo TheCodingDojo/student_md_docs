@@ -6,11 +6,12 @@
 
 1. open terminal
 2. `dotnet new mvc --no-https -o ProjName`
-3. `cd ProjName`
+3. **`cd ProjName`**
 4. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
    - this will add an installed package line to your `.csproj` file
    - [Learn platform version number reference](http://learn.codingdojo.com/m/25/5675/40112)
 5. `code .`
+6. Click yes to the box that will popup in the bottom right that says required assets are missing
 
 ---
 
@@ -100,7 +101,7 @@
 
 - this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many controller actions
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
-  - this is available from the corresponding `services.AddHttpContextAccessor();` in `Startup.cs`
+  - this is available from the corresponding `services.AddHttpContextAccessor();` in that will be added in later step
 - Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
 
 ---
