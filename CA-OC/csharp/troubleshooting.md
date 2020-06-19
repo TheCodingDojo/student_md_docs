@@ -63,9 +63,11 @@
 
 ## Duplicate key primary - value `0`
 
+- This means there is already a row in this table with a primary key of 0 and you are trying to add another one with primary key of 0
 - The primary key shouldn't be 0, if MySQL is auto incrementing the primary key like we want it to, it will start at `1`
-- In MySQL Workbench, right click the table and click Alter Table, look at the primary key and make sure the `AI` box is checked, then apply changes
-  - if it doesn't let you apply changes, follow the Reset Database steps in this file
+- In MySQL Workbench, right click the table, click alter table, then look at the primary key row, check if the `AI` (auto increment) box is checked. If it's not, something went wrong with your migrations, you can try checking it and applying the changes, but something else is probably wrong that caused it to not be checked in the first place
+- Verify this model's primary key field is named properly following this pattern: `ModelNameId`, if it's not, fix it then migrate and update db
+  - if it still doesn't work, following the Reset Database steps in this file
 
 ## Session not persisting w/ MVC template
 
