@@ -1,25 +1,30 @@
 # Exam Info
 
+## General Info
+
 - It's common to have to re-take the exam, success rate is dramatically higher on the 2nd attempt.
 - **To enter code:** go to [https://learn.codingdojo.com/dashboard](https://learn.codingdojo.com/dashboard) or click back to tracks -> click exams at the top
 - 5 hour timer will start when exam code is entered (DM **if you run out of time** and are close), 24 hours to deploy
-- download assets and take screenshot or copy instruction text (in the event of an internet disconnection)
-- **if done early, ask instructor for a pre-check**, we can tell you if something needs more work and you can use your remaining time to fix. If all red belt requirements are met, you can work on black belt requirements without worrying about breaking things.
-- **DO NOT LEAVE without showing your instructor your exam**
-- **NO HELPING EACH OTHER. It's easy to spot shared code**
+- **download exam assets and take screenshot or copy instruction text** (in the event of an internet disconnection)
 - open book / open notes / can use google
+- **NO HELPING EACH OTHER. It's easy to spot shared code. DO NOT share exam info with those who haven't taken it.**
+
+---
+
+## COMMUNICATE WITH YOUR INSTRUCTOR
+
+- depending on class size, instructor may want to grade your exam with you right as you finish
+
+### DM Instructor When
+
+- Finished and ready for us to check it (double check it before messaging us)
+- If you get really stuck, depending on the problem we may give you a hint
 
 ---
 
 ## What to focus on
 
 - For all stacks except Web Fund: **focus on functionality and red belt requirements first**, do not spend a lot of time on CSS, until you have everything working
-
----
-
-## ABSOLUTELY NO sharing exam wire frame to those who haven't taken it yet
-
-- this will result in those who haven't taken it yet getting a harder exam
 
 ---
 
