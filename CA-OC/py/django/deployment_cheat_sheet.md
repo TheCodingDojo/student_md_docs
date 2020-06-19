@@ -8,7 +8,7 @@
 
 ## Git Repo steps
 
-1. open project to `{{your_project_name}}` folder
+1. open VSCode to `{{your_project_name}}` folder
 2. create a file named `.gitignore` at same level as `manage.py`
 
    - add this code to it
@@ -22,12 +22,11 @@
        db.sqlite3
        ```
 
-3. Open VSCode to `{{your_project_name}}` folder
-4. With your environment **activated** in VSCode terminal type : `pip freeze > requirements.txt`
-5. `git init`
-6. `git add .`
-7. `git commit -m "first commit"`
-8. [create a repo on github](https://github.com/new)
+3. With your environment **activated** in VSCode terminal type : `pip freeze > requirements.txt`
+4. `git init`
+5. `git add .`
+6. `git commit -m "first commit"`
+7. [create a repo on github](https://github.com/new)
    - after repo is created github will provide some steps:
    1. paste the `git remote add` line to terminal
    2. paste the `git push` line to terminal
