@@ -3,6 +3,7 @@
 - It's common to have to re-take the exam, success rate is dramatically higher on the 2nd attempt.
 - **To enter code:** go to [https://learn.codingdojo.com/dashboard](https://learn.codingdojo.com/dashboard) or click back to tracks -> click exams at the top
 - 5 hour timer will start when exam code is entered (DM **if you run out of time** and are close), 24 hours to deploy
+- download assets and take screenshot or copy instruction text (in the event of an internet disconnection)
 - **if done early, ask instructor for a pre-check**, we can tell you if something needs more work and you can use your remaining time to fix. If all red belt requirements are met, you can work on black belt requirements without worrying about breaking things.
 - **DO NOT LEAVE without showing your instructor your exam**
 - **NO HELPING EACH OTHER. It's easy to spot shared code**
@@ -37,6 +38,7 @@
 - most important thing is the overall layout / alignment
   - focus on getting this down before the small details like gradients, etc.
 - keep developing on same window size to avoid different sizes breaking your layout
+- use [html validator](https://validator.w3.org/) & [css validator](http://www.css-validator.org/) (by file upload or direct input)
 - **don't worry about the upload a video demo requirement**, if you want, you can take a screenshot of your website when it's finished and upload that instead
 - difficulty will be similar to these assignments:
   - Portfolio
