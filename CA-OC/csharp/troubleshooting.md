@@ -57,7 +57,7 @@
 ## Foreign Key Constraint Failure
 
 - A foreign key is required on the model and was not provided, you need to provide it.
-- `someModelInstance.NameOfForeignKey = someInteger;` where `someInteger` is the primary key of a different model
+- `someModelInstance.ForeignModelNameId = someInteger;` where `someInteger` is the primary key (ID) of a different model
 
 ---
 
