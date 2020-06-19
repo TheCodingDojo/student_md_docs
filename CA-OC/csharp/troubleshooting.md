@@ -57,7 +57,15 @@
 ## Foreign Key Constraint Failure
 
 - A foreign key is required on the model and was not provided, you need to provide it.
-- `someModelInstance.NameOfForeignKey = someInteger` where `someInteger` is the primary key of a different model
+- `someModelInstance.NameOfForeignKey = someInteger;` where `someInteger` is the primary key of a different model
+
+---
+
+## Duplicate key primary - value `0`
+
+- The primary key shouldn't be 0, if MySQL is auto incrementing the primary key like we want it to, it will start at `1`
+- In MySQL Workbench, right click the table and click Alter Table, look at the primary key and make sure the `AI` box is checked, then apply changes
+  - if it doesn't let you apply changes, follow the Reset Database steps in this file
 
 ## Session not persisting w/ MVC template
 
