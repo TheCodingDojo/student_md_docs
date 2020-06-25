@@ -42,7 +42,9 @@
 
 ---
 
-## Reset Database
+## DB / Migrations Related
+
+### Reset Database
 
 1. drop the migrations table in the db
 2. delete migrations folder in project
@@ -54,20 +56,32 @@
 
 ---
 
-## Foreign Key Constraint Failure
+### Foreign Key Constraint Failure
 
 - A foreign key is required on the model and was not provided, you need to provide it.
 - `someModelInstance.ForeignModelNameId = someInteger;` where `someInteger` is the primary key (ID) of a different model
 
 ---
 
-## Duplicate key primary - value `0`
+### Duplicate key primary - value `0`
 
 - This means there is already a row in this table with a primary key of 0 and you are trying to add another one with primary key of 0
 - The primary key shouldn't be 0, if MySQL is auto incrementing the primary key like we want it to, it will start at `1`
 - In MySQL Workbench, right click the table, click alter table, then look at the primary key row, check if the `AI` (auto increment) box is checked. If it's not, something went wrong with your migrations, you can try checking it and applying the changes, but something else is probably wrong that caused it to not be checked in the first place
 - Verify this model's primary key field is named properly following this pattern: `ModelNameId`, if it's not, fix it then migrate and update db
   - if it still doesn't work, following the Reset Database steps in this file
+
+### BLOB, TEXT can't have a default value
+
+- open the migrations folder, open the most recent migration, delete the `defaultValue` line then try updating database again
+- alternatively, follow the reset DB steps
+
+### Table Already Exists
+
+- `dotnet ef migrations add InitialCreate`
+- `dotnet ef database update`
+
+---
 
 ## Session not persisting w/ MVC template
 
