@@ -8,6 +8,12 @@
 2. follow install steps below
 3. follow testing steps below
 
+### Reasons to Reinstall
+
+- Authentication method 'caching_sha2_password' failed
+  - forgot to click **RADIO BUTTON:** "Use Legacy Authentication Method" when installing
+- Forgot password or password not working
+
 ---
 
 ## [Windows Installation Video](https://www.youtube.com/watch?v=u96rVINbAUI)
