@@ -9,6 +9,7 @@
 ## Job Seeking
 
 - [Job Postings in HTTP Headers](https://frenxi.com/http-headers-you-dont-expect/)
+- [Companies That Don't Whiteboard](https://github.com/poteto/hiring-without-whiteboards)
 
 ---
 
