@@ -67,12 +67,11 @@
 ## Order NOT Guaranteed
 
 - the order that the keys were added in is not guaranteed to be the same order that the keys are looped in and may vary from browser to browser
-- the ordering of object keys in JS does follow some patterns that have been formalized, but there are quite a few rules and it's still usually better to use the below instead if order matters
 - if order is important you need to use an array or the built in `Map` obect which is a type of hash table that preservers the order that the keys were inserted in, the `Map` object can also handle **objects AS keys** instead of only strings
-
   - you could also loop over an array that is in the order you want it to be in, and then use the items in that array to access the values in the hash table which will then access them in the same order as the array, since the array is being looped over
+- the ordering of object keys in JS DOES follow some rules that have been formalized, but there are quite a few rules and it's still often better to use the alternative options when order is important
 
-- ```js
+* ```js
   const obj = {};
   obj[-5] = -5;
   obj[5] = 5;
