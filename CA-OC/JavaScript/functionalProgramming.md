@@ -51,6 +51,11 @@
 #### Q: how would we do this without `.forEach`?\*
 
 - ```js
+  const students = [
+    { name: "Ricky", attendedLecture: false },
+    { name: "Bubbles", attendedLecture: false },
+    { name: "Juliann", attendedLecture: false },
+  ];
   const numbers = [1, 2, 3, 4, 5];
 
   function printAllItems(arr) {
@@ -121,6 +126,20 @@
     - ```js
       printAllItems([10, 11, 12]);
       ```
+
+### Update array of objects with `.forEach`
+
+- ```js
+  const studentsAttendingLecture = ["Bubbles"];
+  console.log(students);
+
+  students.forEach((student, idx) => {
+    if (studentsAttendingLecture.includes(student.name)) {
+      student.attendedLecture = true;
+    }
+  });
+  console.log(students);
+  ```
 
 ---
 
@@ -254,6 +273,24 @@
   });
 
   console.log(dontBeOdd);
+  ```
+
+---
+
+### Filter array of objects
+
+- ```js
+  const delinquentStudents = students.filter((student) => {
+    return student.attendedLecture === false;
+  });
+
+  console.log(delinquentStudents);
+
+  const goodBois = students.filter((student) => {
+    return student.attendedLecture === true;
+  });
+
+  console.log(goodBois);
   ```
 
 ---
