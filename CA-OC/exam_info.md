@@ -11,6 +11,13 @@
 
 ---
 
+## PLAGIARISM
+
+- You can repurpose / edit learn platform code, stack overflow, or lecture code to make it work for you, HOWEVER if you copy paste LARGE amounts of code **without any changes**, that is considered **plagiarism**. Students have been **EXPELLED for plagiarism.**
+- Other examples: cloning entire online repos of a past students exam, sharing exam code with other students, etc. We have had to expel students for these violations as well.
+
+---
+
 ## COMMUNICATE WITH YOUR INSTRUCTOR
 
 - depending on class size, instructor may want to grade your exam with you right as you finish
