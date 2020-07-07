@@ -2,31 +2,77 @@
 
 - just like OOP is a programming paradigm focused around objects, functional programming is a programming paradigm centered around functions
 - in JS, functions can be passed to other functions as an argument, in the same way that you can pass an object to a function as an argument
-  - the main difference is that if a function is passed as an argument, the corresponding parameter will needs to be treated like a function, meaning it can be executed when you want to run the function that was passed in (the callback function, you call the function back at a later time, when appropriate)
-
----
-
-## `nodemon`
-
-- run file with `nodemon` if you want it to auto re-run after code changes are detected
-- `nodemon fileName`
-- `nodemon path/to/fileName`
+  - the main difference is that if a function is passed as an argument, the corresponding parameter needs to be treated like a function, meaning it can be executed when you want to run the function that was passed in (the callback function, you call the function back at a later at the right time)
 
 ---
 
 ## Arrow function syntax variations
 
-- if there's only 1 parameter, the parenthesis around the single parameter can be omitted
-  - as soon as you need to add another parameter, you must add the parenthesis back
-- if the body of the function is one line, no curly braces are needed and no `return` is needed, it will auto `return` the result of the 1 line of code (implicit return)
-  - as soon as your function body needs to be more than 1 line, you must add the curly braces in and explicityly write `return` if the function should `return` something
+- arrow functions are not hoisted
+- use `()` when there are no parameters just like a regular function
+
+### Regular function for comparison
+
+- equivalent to below isEven arrow function examples
+
+- ```js
+  // function declaration (is hoisted, preceding code can execute it)
+  function isEven(num) {
+    return num % 2 === 0;
+  }
+  ```
+
+- ```js
+  // function expression, function saved in var, is executed the same way (is not hoisted, preceding code cannot execute it)
+  const isEven = function (num) {
+    return num % 2 === 0;
+  };
+  ```
+
+### Full long-form arrow function syntax
+
+- ```js
+  const isEven = (num) => {
+    return num % 2 === 0;
+  };
+  ```
+
+### Full shorthand arrow function syntax
+
+- no parenthesis are needed if there is a single parameter only
+  - parenthesis MUST surround paremeters if there is more than one parameter
+- no curly braces are needed if the body of the function is one line of code only
+  - curly braces MUST be added as soon as you add another separate line of code
+- `return` can be omitted, the result of the function body is automatically returned when not using curly braces
+- `const isEven = num => num % 2 === 0;`
+
+  - single param called `num`, implicitly (automatically) returns the result of `num % 2 === 0` which is a boolean
+
+### Shorthand arrow syntax returning an object
+
+- with shorthand, if **returning an object**, then the curly braces are ambiguous, the interpreter thinks the curly braces are for the function body and not the returned object, parenthesis MUST be used in this case if NOT using curly braces for function body and some other cases with more complex expressions
+
+  - ```js
+    const personFactory = (firstName, lastName) => ({
+      firstName: firstName,
+      lastName: lastName,
+    });
+    ```
+
+### Long-form arrow syntax returning an object
+
+- ```js
+  const personFactory = (firstName, lastName) => {
+    return { firstName: firstName, lastName: lastName };
+  };
+  ```
 
 ---
 
 ### Advice
 
-- to start, always use parenthesis and curly braces because this is the only way you won't accidentally run into an error by forgetting to add them back in if you need them later on
-- then when used to it, start using the shorthand
+- to start, ALWAYS use the full long-form so you don't run into issues of forgetting to add in parenthesis or curly braces when they are needed, the long-form is the only form that works in all cases
+- use shorthand once you become comfortable
 
 ---
 
