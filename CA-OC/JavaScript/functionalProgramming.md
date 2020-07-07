@@ -67,9 +67,7 @@
   };
   ```
 
----
-
-### Advice
+### Arrow function syntax advice
 
 - to start, ALWAYS use the full long-form so you don't run into issues of forgetting to add in parenthesis or curly braces when they are needed, the long-form is the only form that works in all cases
 - use shorthand once you become comfortable
