@@ -31,7 +31,7 @@
 
 ## List of deployed projects
 
-- [havenshearth.com](havenshearth.com)
+- [havenshearth.com](https://havenshearth.com/welcome)
 - [http://strivetogether.site/](http://strivetogether.site/)
 
 ## APIs
