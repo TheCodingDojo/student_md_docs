@@ -9,7 +9,7 @@
 5. in VSCode terminal: `npm init -y` to initialize a new EMPTY back-end node project (your server) with a `package.json`
 6. install back-end dependencies, usually `npm i express mongoose cors`
    - your back-end `package.json` should now show have these dependencies listed
-7. create `server` folder
+7. create a `server` folder
 8. in VSCode terminal: `npx create-react-app client` to create a `client` folder for your front-end react app
 9. open a 2nd VSCode terminal (split terminal icon or plus icon) and `cd client` when it's done being created
 10. install front-end dependencies, usually `npm i axios @reach/router`
