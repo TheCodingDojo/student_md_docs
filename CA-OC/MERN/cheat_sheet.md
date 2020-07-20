@@ -1,6 +1,6 @@
 # MERN Basic Project Creation Cheat Sheet
 
-## REMOVE THE `{{TEXT}}` and replace the text with your own
+## REPLACE `{{TEXT}}` with your own text
 
 1. open terminal to where you want your project to be created
 2. `mkdir {{PROJECT_NAME}}`
@@ -24,6 +24,8 @@
 
 ## [Troubleshooting](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/mern/troubleshooting.md)
 
-## Recursively delete all `node_models` folders
+## Misc
+
+### Recursively delete all `node_models` folders from terminal
 
 - `find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +`
