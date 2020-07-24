@@ -28,3 +28,5 @@
 
 - `mv: cannot stat 'build': No such file or directory`
   - you forgot the deployment step that has you delete the `.gitignore` in the `client` folder, search `gitignore` on the deployment steps page
+
+## A component is changing an uncontrolled input
