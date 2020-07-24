@@ -10,16 +10,12 @@
 - open book / open notes / can use google
 - **NO HELPING EACH OTHER. It's easy to spot shared code. DO NOT share exam info with those who haven't taken it.**
 
----
-
-## PLAGIARISM
+### PLAGIARISM
 
 - You can repurpose / edit learn platform code, stack overflow, or lecture code to make it work for you, HOWEVER if you copy paste LARGE amounts of code **without any changes**, that is considered **plagiarism**. Students have been **EXPELLED for plagiarism.**
 - Other examples: cloning entire online repos of a past students exam, sharing exam code with other students, etc. We have had to expel students for these violations as well.
 
----
-
-## COMMUNICATE WITH YOUR INSTRUCTOR
+### COMMUNICATE WITH YOUR INSTRUCTOR
 
 - depending on class size, instructor may want to grade your exam with you right as you finish
 
@@ -27,17 +23,15 @@
 
 - Finished and ready for us to check it (double check it before messaging us)
 - If you get really stuck, depending on the problem we may give you a hint
+- If you run out of time, upload exam before you run out of time and then let us know how close you were to finishing
 
----
-
-## What to focus on
+### What to focus on
 
 - For all stacks except Web Fund: **focus on functionality and red belt requirements first**, do not spend a lot of time on CSS, until you have everything working
 
----
+### Use a Checklist To Track Completed Requirements & For Testing
 
-## Use a Checklist To Track Completed Requirements & For Testing
-
+- read the requirements very carefully
 - check off each requirement when completed
 - any time a change is made near the end, go through the checklist again testing each requirements and checking it off to make sure nothing broke what was working before
 
