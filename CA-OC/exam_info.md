@@ -3,7 +3,7 @@
 ## General Info
 
 - It's common to have to re-take the exam, success rate is dramatically higher on the 2nd attempt.
-- **To enter code:** go to [https://learn.codingdojo.com/dashboard](https://learn.codingdojo.com/dashboard) or click back to tracks -> click exams at the top
+- **To enter code:** go to [Learn Dashboard](https://learn.codingdojo.com/signin) or click back to tracks -> click exams at the top
 - 5 hour timer will start when exam code is entered (DM **if you run out of time** and are close), 24 hours to deploy
   - **UPLOAD** exam before your time runs out
 - **download exam assets and take screenshot or copy instruction text** (in the event of an internet disconnection)
