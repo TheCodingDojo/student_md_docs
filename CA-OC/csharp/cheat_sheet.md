@@ -7,11 +7,13 @@
 1. open terminal
 2. `dotnet new mvc --no-https -o ProjName`
 3. **`cd ProjName`**
-4. `dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0`
+4. Add Packages
+   - `dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.1`
+   - `dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.5`
    - this will add an installed package line to your `.csproj` file
-   - [Learn platform version number reference](http://learn.codingdojo.com/m/25/5675/40112)
 5. `code .`
 6. Click yes to the box that will popup in the bottom right that says required assets are missing
+   - we only want to click yes when we are opening the actual project folder, not a parent folder
 
 ---
 
@@ -20,8 +22,9 @@
 - add the below, **INSIDE** existing curly braces, **_don't forget the comma_** that's needed between JSON properties
 
   - ```json
+      "AllowedHosts": "*",
       "DBInfo": {
-        "Name": "MySqlConnection",
+        "Name": "MySqlConnect",
         "ConnectionString": "server=localhost;userid=root;password=root;port=3306;database=YOUR_DB_NAME;SslMode=None"
       },
     ```
@@ -81,28 +84,12 @@
 
 ---
 
-## 5. [Delete the following lines from `Startup.cs`](http://learn.codingdojo.com/m/25/5671/39759)
-
-- ```csharp
-    services.Configure<CookiePolicyOptions>(options =>
-    {
-      // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-      options.CheckConsentNeeded = context => true;
-      options.MinimumSameSitePolicy = SameSiteMode.None;
-    });
-  ```
-
-- `app.UseHttpsRedirection();`
-- `app.UseCookiePolicy();`
-
-- delete `<partial name="_CookieConsentPartial"></partial>` from `_Layout.cs`
-
 ## 6. Access Session from Views Directly
 
 - this is helpful if you are repeatedly adding the same thing from session into the `ViewBag` for many controller actions
 - add `@using Microsoft.AspNetCore.Http` in `Views/_ViewImports.cshtml`
-  - this is available from the corresponding `services.AddHttpContextAccessor();` in that will be added in later step
-- Access in a view: `<p>@Context.Session.GetString("UserFullName")</p>`
+  - this is available from the corresponding `services.AddHttpContextAccessor();` that will be added in later step
+- Example of accessing session from a view: `<p>@Context.Session.GetString("UserFullName")</p>`
 
 ---
 
@@ -112,13 +99,15 @@
 - `AddDbContext` is creating the options that will be passed to our `ProjNameContext` model
 
 - ```csharp
-  services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
-  // to access session directly from view in combination with @using in _ViewImports
-  services.AddHttpContextAccessor();
-  services.AddSession();
+  public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+    // to access session directly from view in combination with @using in _ViewImports
+    services.AddHttpContextAccessor();
+    services.AddSession();
 
-  // this line should already be there:
-  services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+    services.AddMvc(options => options.EnableEndpointRouting = false);
+  }
   ```
 
 ---
@@ -128,9 +117,27 @@
 - add below lines above `app.UseMvc`
 
 - ```csharp
-  // css, js, and image files can now be added to wwwroot folder
-  app.UseStaticFiles();
-  app.UseSession();
+  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+  {
+      if (env.IsDevelopment())
+      {
+          app.UseDeveloperExceptionPage();
+      }
+      else
+      {
+          app.UseExceptionHandler("/Home/Error");
+      }
+
+      // css, js, and image files can now be added to wwwroot folder
+      app.UseStaticFiles();
+      app.UseSession();
+      app.UseMvc(routes =>
+      {
+          routes.MapRoute(
+              name: "default",
+              template: "{controller=Home}/{action=Index}/{id?}");
+      });
+  }
   ```
 
 ---
@@ -138,6 +145,7 @@
 ## 9. Add Controller Constructor to Receive DbContext (IN EVERY CONTROLLER YOU MAKE)
 
 - inside your controller class, at the top
+- **REPLACE** the constructor that already exists with the below
 
 - ```csharp
   private ProjNameContext db;
@@ -148,6 +156,15 @@
   ```
 
   - you can create a 2nd controller with the same pattern as above, just give the controller a new name
+
+- Also add the route URL above the `Index` action / method
+
+- ```csharp
+  [HttpGet("")]
+  public IActionResult Index()
+  ```
+
+  - you will get an error without this if your `Startup.cs` doesn't have the `routes.MapRoute` code
 
 ---
 
