@@ -102,7 +102,7 @@
   public void ConfigureServices(IServiceCollection services)
   {
     services.AddDbContext<ProjNameContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
-    // to access session directly from view in combination with @using in _ViewImports
+    // to access session directly from view in: @using Microsoft.AspNetCore.Http in Views/_ViewImports.cshtml
     services.AddHttpContextAccessor();
     services.AddSession();
 
