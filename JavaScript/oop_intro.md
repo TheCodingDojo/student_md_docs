@@ -2,7 +2,7 @@
 
 - `node path/to/fileName.js` to run
 - `nodemon path/to/fileName.js` to auto refresh & run on code change
-- [What is this in JS - doc to share](https://github.com/TheCodingDojo/student_md_docs/blob/master/CA-OC/JavaScript/what_is_this.md)
+- What is this? (in JS)
 
 ## Prototype
 
@@ -43,9 +43,9 @@
   const objectLiteral = {
     key1: "val1",
     key2: "val2",
-    methodName: function() {
+    methodName: function () {
       console.log("method on object literal");
-    }
+    },
   };
   ```
 
@@ -60,13 +60,13 @@
       lastName: lastName,
       // shorthand: can omit the colon when param name is same as key name
       height,
-      fullName: function() {
+      fullName: function () {
         console.log(`${this.firstName} ${this.lastName}`);
       },
       // shorthand method
       fullName2() {
         console.log(`${this.firstName} ${this.lastName}`);
-      }
+      },
     };
   }
   ```
@@ -86,7 +86,7 @@
 
     // this method is duplicated onto every instance
     // can manually add it to prototype so it is shared instead
-    this.fullName = function() {
+    this.fullName = function () {
       console.log(`${this.firstName} ${this.lastName}`);
     };
   }
@@ -135,7 +135,7 @@
   const carProto = {
     drive() {
       console.log("Vroom!");
-    }
+    },
   };
 
   const factoryCar = () => Object.create(proto);
