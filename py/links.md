@@ -1,1 +1,0 @@
-- [Restful statelessness](https://restfulapi.net/statelessness/)
